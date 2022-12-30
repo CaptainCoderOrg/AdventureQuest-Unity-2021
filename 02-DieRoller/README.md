@@ -215,7 +215,7 @@ create a `MonoBehaviour` called `DieController`.
 ![Create Die Controller](../imgs/02-DieRollerScene/13-CreateDieController.gif)
 
 We will use a `DieController` to... well... control a `Die`. More specifically a
-`DieController` defines how a Die interacts with a `Scene`. 
+`DieController` defines how a `Die` interacts with a `Scene`. 
 
 1. Update your `DieController` script:
 
@@ -227,7 +227,7 @@ namespace AdventureQuest.Dice
     public class DieController : MonoBehaviour
     {
 
-        private Die Die { get; set; }
+        private Die _die;
 
     }
 }
@@ -237,24 +237,25 @@ namespace AdventureQuest.Dice
   add it to the `AdventureQuest.Dice` name space.
 * To be able to attach a `DieController` to our `Button`, it must be a `MonoBehaviour`.
 * Additionally, because a `DieController` controls a `Die` we add a `Die`
-  property. 
+  field. 
   
-**Notice**: we have specified that the `Die` property is `private`. This means
-that the `Die` variable will only ever be accessed within this file
-preventing us (or our dev-team) from accidentally writing a bug that modifies
-/ uses it in some way. Additionally, it is 
+**Notice**: we have specified that the `_die` field is `private`. This means
+that the `_die` variable will only ever be accessed within this file preventing
+us (or our dev-team) from accidentally writing a bug that modifies / uses it in
+some way. Additionally, the naming convention for `private` fields in C# is to
+prefix with an underscore (_) and use camelCase.
 
-2. Add a `Start()` method which initializes `Die` to be a 6 sided `Die`.
+1. Add a `Start()` method which initializes `_die` to be a 6 sided `Die`.
 
 ```csharp
 public class DieController : MonoBehaviour
 {
 
-    private Die Die { get; set; }
+    private Die _die;
     
     void Start()
     {
-        Die = new Die(6);
+        _die = new Die(6);
     }
 }
 ```
@@ -274,8 +275,8 @@ public class DieController : MonoBehaviour
     
     public void Roll()
     {
-        Die.Roll();
-        Debug.Log($"Rolled a {Die.LastRolled}");
+        _die = new Die(Sides);
+        Debug.Log($"Rolled a {_die.LastRolled}");
     }
 }
 ```
@@ -363,11 +364,11 @@ public class DieController : MonoBehaviour
 {
 
     public int Sides { get; private set; } = 6;
-    private Die Die { get; set; }
+    private Die _die;
     
     void Start() 
     {
-         Die = new Die(Sides); // <-- This line changed!
+        _die = new Die(Sides); // <-- This line changed!
     }
     public void Roll() { // omitted for brevity }
 }
@@ -386,7 +387,7 @@ public class DieController : MonoBehaviour
 {
 
     [field: SerializeField]
-    private int Sides { get; set; } = 6;
+    public int Sides { get; private set; } = 6;
     
     // omitted for brevity
 }
