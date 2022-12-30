@@ -411,4 +411,4 @@ screen?
 
 Once you've added in several dice buttons, it's time to get the information
 displaying on the screen. To do this, we will learn how to create our own
-`UnityEvent`s. When you're ready, proceed to `03 - Adding an OnRoll Event`.
+`UnityEvent`s. When you're ready, proceed to [03 - Adding an OnRoll Event](../03-OnRollEvent/README.md).
