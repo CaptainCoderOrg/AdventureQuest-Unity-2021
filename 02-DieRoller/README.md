@@ -433,6 +433,12 @@ Group](https://docs.unity.cn/2021.3/Documentation/Manual/script-HorizontalLayout
 Can you utilize it to position your buttons evenly along the bottom of the
 screen?
 
+When you're finished, your `Hierarchy` should match this one:
+
+![Hierarchy Finished](../imgs/02-DieRollerScene/22-Hierarchy-Organization.png)
+
+And your scene should look similar to this:
+
 ![Finished Challenge](../imgs/02-DieRollerScene/21-FinishedChallenge.png)
 
 # What's Next?
