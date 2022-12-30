@@ -5,6 +5,23 @@ different sided dice. Before starting, be sure you've completed [Part 1:
 Modeling a Die](../01%20-%20Modeling%20a%20Die/README.md) and that all of your
 tests are passing.
 
+- [Part 2 - Creating a Die Roller Scene](#part-2---creating-a-die-roller-scene)
+- [01. Create a Scene](#01-create-a-scene)
+- [02. Setup Screen Dimensions](#02-setup-screen-dimensions)
+- [03. Adding a Button to the Scene](#03-adding-a-button-to-the-scene)
+- [04. Adjusting the Canvas](#04-adjusting-the-canvas)
+- [05. Positioning the Button](#05-positioning-the-button)
+- [06. Sizing the Button](#06-sizing-the-button)
+- [07. Creating a DieController](#07-creating-a-diecontroller)
+- [08. Adding a DiceController to the Scene](#08-adding-a-dicecontroller-to-the-scene)
+- [09. Rolling on Button Click](#09-rolling-on-button-click)
+  - [Test it out](#test-it-out)
+- [10. Generalizing the DieController](#10-generalizing-the-diecontroller)
+  - [Test it Out](#test-it-out-1)
+- [11. Challenge: Create a Set of Dice](#11-challenge-create-a-set-of-dice)
+- [What's Next?](#whats-next)
+
+
 # 01. Create a Scene
 
 A **Scene** in Unity is where you work with part of a game or application. In

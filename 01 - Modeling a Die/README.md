@@ -12,6 +12,25 @@ games bring out giant sacks of dice with varying sizes and combinations.
 
 To do this, we will first write a program that models an individual die.
 
+- [Part 1 - Modeling a Die](#part-1---modeling-a-die)
+- [Code Structure in Adventure Quest](#code-structure-in-adventure-quest)
+- [01. The Die Class](#01-the-die-class)
+  - [Create the Die Class](#create-the-die-class)
+  - [Properties of a Die](#properties-of-a-die)
+  - [Constructing a Die](#constructing-a-die)
+    - [Challenge: Write the Implementation for the Die constructor](#challenge-write-the-implementation-for-the-die-constructor)
+- [02. The DieTest Class](#02-the-dietest-class)
+  - [Create a DieTest Class](#create-a-dietest-class)
+    - [The First Test](#the-first-test)
+    - [Running the Test](#running-the-test)
+- [03. Ensuring a Die has at least 2 sides](#03-ensuring-a-die-has-at-least-2-sides)
+  - [Testing for Exceptions](#testing-for-exceptions)
+  - [Run the Test](#run-the-test)
+- [03. What does a Die do?](#03-what-does-a-die-do)
+  - [Challenge: Implement the Roll Method](#challenge-implement-the-roll-method)
+- [What's Next?](#whats-next)
+
+
 # Code Structure in Adventure Quest
 
 As a programmer, it is our responsibility to manage the complexity of a program.
