@@ -433,6 +433,8 @@ Group](https://docs.unity.cn/2021.3/Documentation/Manual/script-HorizontalLayout
 Can you utilize it to position your buttons evenly along the bottom of the
 screen?
 
+![Finished Challenge](../imgs/02-DieRollerScene/21-FinishedChallenge.png)
+
 # What's Next?
 
 Once you've added in several dice buttons, it's time to get the information
