@@ -28,6 +28,7 @@ To do this, we will first write a program that models an individual die.
   - [Run the Test](#run-the-test)
 - [03. What does a Die do?](#03-what-does-a-die-do)
   - [Challenge: Implement the Roll Method](#challenge-implement-the-roll-method)
+  - [Good Time to Commit](#good-time-to-commit)
 - [What's Next?](#whats-next)
 
 
@@ -534,6 +535,11 @@ This test works the same as the 6 sided die test but with a 12 sided die.
 With your method stub in place as well as a few unit tests to give you
 confidence that they are working, can you write an implementation to the `Roll`
 method?
+
+## Good Time to Commit
+
+Now would be a good time to make a `git` commit. You just finished a feature.
+More specifically, you just implemented a `Die` class which models a fair die.
 
 # What's Next?
 

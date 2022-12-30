@@ -18,6 +18,7 @@ tests are passing.
   - [Test it out](#test-it-out)
 - [10. Generalizing the DieController](#10-generalizing-the-diecontroller)
   - [Test it Out](#test-it-out-1)
+  - [Good Time to Commit](#good-time-to-commit)
 - [11. Challenge: Create a Set of Dice](#11-challenge-create-a-set-of-dice)
 - [What's Next?](#whats-next)
 
@@ -414,6 +415,13 @@ If all went well, you should now see a new set of numbers being rolled!
 because we added in an `ArgumentException` during construction, the console will
 report an error immediately when the game is launched. By failing fast, we are
 more likely to be able to identify this bug quickly
+
+## Good Time to Commit
+
+Now would be a good time to make a `git` commit. You just finished a feature.
+More specifically, you just implemented a simple `DieController`. Before
+committing, be sure you save your `Die Roller` scene (Unity doesn't auto save
+for you).
 
 # 11. Challenge: Create a Set of Dice
 

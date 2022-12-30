@@ -71,6 +71,15 @@ compatibility.
 
 ![Open Project](../imgs/00%20-%20Setup/07-OpenProject.png)
 
-The first time the project is opened, it will take several minutes to load. If all went well,
-you are now ready to proceed to [Part 1: Modeling a Die](../01%20-%20Modeling%20a%20Die/README.md).
+The first time the project is opened, it will take several minutes to load. 
+
+## Good Time to Commit
+
+Now would be a good time to make a `git` commit. You just finished a **chore**.
+More specifically, you just initialized the Adventure Quest Unity project.
+
+## What's next?
+
+With the project setup and ready to go, you can proceed to [Part 1: Modeling a
+Die](../01%20-%20Modeling%20a%20Die/README.md).
 
