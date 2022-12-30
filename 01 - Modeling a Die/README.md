@@ -8,6 +8,8 @@ Adventure Quest will model its randomness in the same way!
 That said, we're not talking about traditional 6 sided die. No, no, no! These
 games bring out giant sacks of dice with varying sizes and combinations.
 
+![Dice Goblin](../imgs/DiceGoblin.png)
+
 To do this, we will first write a program that models an individual die.
 
 # Code Structure in Adventure Quest
