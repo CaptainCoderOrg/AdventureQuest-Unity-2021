@@ -435,6 +435,9 @@ for you).
 Using everything you've done so far, can you create a set of Table Top Role
 Playing Game Dice? The set should include a d4, d6, d8, d10, d12, and d20.
 
+For organization purposes, you should create a parent GameObject for all of your
+dice buttons as well as all of your dice controllers.
+
 Read the Manual: Research the [Horizontal Layout
 Group](https://docs.unity.cn/2021.3/Documentation/Manual/script-HorizontalLayoutGroup.html).
 Can you utilize it to position your buttons evenly along the bottom of the
