@@ -16,6 +16,8 @@ Throughout this project, you will learn about:
 
 In this section, you will download the project template and import it into Unity Hub.
 
+# Chapter 1: Modeling a Die
+
 ## Part 1 - Modeling a Die
 
 [LINK](01%20-%20Modeling%20a%20Die/README.md)
@@ -36,3 +38,10 @@ and display the result in the Unity console.
 
 In this section, you will learn how to add `UnityEvent`s to your scripts and
 update elements on the screen when a `Die` is rolled.
+
+## Part 4: Creating a Die Button Prefab
+
+[LINK](04-DieButtonPrefab/README.md)
+
+In this section, you will learn about Unity `Prefab` `GameObject`s to create a
+generalized `Die Button` that can be easily added to any `Scene`.

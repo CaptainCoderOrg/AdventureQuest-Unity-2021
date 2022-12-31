@@ -23,6 +23,7 @@ the project, you can join the discussion here:
 - [02. Add a Result Label to a Die Button](#02-add-a-result-label-to-a-die-button)
 - [03. Adding an OnRoll listener to DieController](#03-adding-an-onroll-listener-to-diecontroller)
   - [Test it Out](#test-it-out)
+  - [Good Time to Commit](#good-time-to-commit)
 - [Challenge: Add Die Labels to All Buttons](#challenge-add-die-labels-to-all-buttons)
 - [What's Next?](#whats-next)
 
@@ -242,6 +243,13 @@ If all went well, you should now be able to run your program, click the `d4`
 button and see the text update. Give it a try!
 
 ![Try it](../imgs/03-AddingAnOnRoll/11-TestIt.gif)
+
+## Good Time to Commit
+
+Now would be a good time to make a `git` commit. You just finished a feature.
+More specifically, you just added a `OnRollString` event to the `DieController`.
+Before committing, be sure you save your `Die Roller` scene (Unity doesn't auto
+save for you).
 
 # Challenge: Add Die Labels to All Buttons
 
