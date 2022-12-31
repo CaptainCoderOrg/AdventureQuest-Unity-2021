@@ -16,7 +16,10 @@ When you're ready, your scene should look and act similar to this:
 
 ## Join the Discussion
 
-TODO!
+If you get stuck, have questions, or want to provide feedback for this part of
+the project, you can join the discussion here:
+[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/6)
+
 
 - [Part 4: Creating a Die Button Prefab](#part-4-creating-a-die-button-prefab)
   - [Join the Discussion](#join-the-discussion)
