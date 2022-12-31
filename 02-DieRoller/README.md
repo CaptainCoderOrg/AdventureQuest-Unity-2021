@@ -5,7 +5,14 @@ different sided dice. Before starting, be sure you've completed [Part 1:
 Modeling a Die](../01%20-%20Modeling%20a%20Die/README.md) and that all of your
 tests are passing.
 
+## Join the Discussion
+
+If you get stuck, have questions, or want to provide feedback for this part of
+the project, you can join the discussion here:
+[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/4)
+
 - [Part 2 - Creating a Die Roller Scene](#part-2---creating-a-die-roller-scene)
+  - [Join the Discussion](#join-the-discussion)
 - [01. Create a Scene](#01-create-a-scene)
 - [02. Setup Screen Dimensions](#02-setup-screen-dimensions)
 - [03. Adding a Button to the Scene](#03-adding-a-button-to-the-scene)

@@ -1,10 +1,20 @@
-# Setup
+# Part 0 - Setup
 
-## 01. Get the Project Template
+In this section, you will import the base `Adventure Quest` project into Unity.
+Before starting, you should ensure you have `Unity 2021.3.XX`. Although this
+project may work with other versions, it has not been tested.
 
-You can access the project template on GitHub here: [LINK](https://github.com/jcollard/AdventureQuest-Unity-2021)
+## Join the Discussion
 
-### Option 1 - Using GitHub (Recommended)
+If you get stuck, have questions, or want to provide feedback for this part of
+the project, you can join the discussion here:
+[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/2)
+
+# 01. Get the Project Template
+
+You can access the project template on GitHub here: [LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/2)
+
+## Option 1 - Using GitHub (Recommended)
 
 1. If you have a GitHub account, select `Use this Template` > `Create a new Repository`
 
@@ -36,7 +46,7 @@ This should launch GitHub Desktop.
 After a few moments, the template will be cloned to your computer. You are now
 ready for [02. Adding Project to Unity Hub](#02-adding-project-to-unity-hub)
 
-### Option 2 - Download Zip (Not Recommended)
+## Option 2 - Download Zip (Not Recommended)
 
 **Note:** If you use this option, your project will not be connected to a GitHub
 repository and you will not be able to make incremental commits.
@@ -47,7 +57,7 @@ clicking `Code` > `Download ZIP`:
 ![Download Zip](../imgs/00%20-%20Setup/01-DownloadZip.png)
 
 
-## 02. Adding Project to Unity Hub
+# 02. Adding Project to Unity Hub
 
 **Note:** This guide was made using `Unity Hub 3.4.1`.
 
@@ -78,7 +88,7 @@ The first time the project is opened, it will take several minutes to load.
 Now would be a good time to make a `git` commit. You just finished a **chore**.
 More specifically, you just initialized the Adventure Quest Unity project.
 
-## What's next?
+# What's next?
 
 With the project setup and ready to go, you can proceed to [Part 1: Modeling a
 Die](../01%20-%20Modeling%20a%20Die/README.md).

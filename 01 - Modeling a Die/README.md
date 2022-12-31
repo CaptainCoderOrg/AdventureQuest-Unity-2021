@@ -12,7 +12,14 @@ games bring out giant sacks of dice with varying sizes and combinations.
 
 To do this, we will first write a program that models an individual die.
 
+## Join the Discussion
+
+If you get stuck, have questions, or want to provide feedback for this part of
+the project, you can join the discussion here:
+[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/3)
+
 - [Part 1 - Modeling a Die](#part-1---modeling-a-die)
+  - [Join the Discussion](#join-the-discussion)
 - [Code Structure in Adventure Quest](#code-structure-in-adventure-quest)
 - [01. The Die Class](#01-the-die-class)
   - [Create the Die Class](#create-the-die-class)
