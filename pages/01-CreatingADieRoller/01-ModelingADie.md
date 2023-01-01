@@ -1,10 +1,11 @@
 ---
-layout: default
+layout: page
 title: "Chapter 1: Modeling a Die"
 nav_order: 1
 parent: "Part 1: Creating a Die Roller"
 ---
 # Chapter 1: Modeling a Die
+{: .no_toc }
 
 Adventure Quest is an adventure game that will take inspiration from table top
 role playing games such as Dungeons & Dragons, Swords & Sorcery, and Fate Core.
@@ -18,32 +19,14 @@ games bring out giant sacks of dice with varying sizes and combinations.
 
 To do this, we will first write a program that models an individual die.
 
-## Join the Discussion
-
-If you get stuck, have questions, or want to provide feedback for this part of
-the project, you can join the discussion here:
-[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/3)
-
-- [Chapter 1: Modeling a Die](#chapter-1-modeling-a-die)
-  - [Join the Discussion](#join-the-discussion)
-- [Code Structure in Adventure Quest](#code-structure-in-adventure-quest)
-- [01. The Die Class](#01-the-die-class)
-  - [Create the Die Class](#create-the-die-class)
-  - [Properties of a Die](#properties-of-a-die)
-  - [Constructing a Die](#constructing-a-die)
-    - [Challenge: Write the Implementation for the Die constructor](#challenge-write-the-implementation-for-the-die-constructor)
-- [02. The DieTest Class](#02-the-dietest-class)
-  - [Create a DieTest Class](#create-a-dietest-class)
-    - [The First Test](#the-first-test)
-    - [Running the Test](#running-the-test)
-- [03. Ensuring a Die has at least 2 sides](#03-ensuring-a-die-has-at-least-2-sides)
-  - [Testing for Exceptions](#testing-for-exceptions)
-  - [Run the Test](#run-the-test)
-- [03. What does a Die do?](#03-what-does-a-die-do)
-  - [Challenge: Implement the Roll Method](#challenge-implement-the-roll-method)
-  - [Good Time to Commit](#good-time-to-commit)
-- [What's Next?](#whats-next)
-
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # Code Structure in Adventure Quest
 
@@ -79,7 +62,7 @@ These questions will help guide us think about how to write a **class** that
 models a die.
 
 ## Create the Die Class
-
+{: .no_toc }
 Let's start by creating a `Die` class in the `Scripts/Model` folder.
 
 1. Open the `Scripts` folder.
@@ -116,7 +99,7 @@ Within the name space we finally define a `class` called `Die`.  In this case,
 we will be composing data together that is a "classification" for a `Die`.
 
 ## Properties of a Die
-
+{: .no_toc }
 Next, let's define the properties of a `Die`. 
 
 Previously, you were asked to think about "What properties make a die a die?
@@ -172,7 +155,7 @@ it limits the number of ways the value can be modified. This practice is
 typically called **encapsulation**.
 
 ## Constructing a Die
-
+{: .no_toc }
 Next, we need a way to create an instance of a `Die`. To do this, we will define
 a **constructor** that allows us to specify the number of **Sides** it has.
 
@@ -209,7 +192,7 @@ In addition to specifying the requirements to create an **object**, the
 **constructor** also implements HOW the **object** is initialized. In this case,
 how should we initialize the properties?
 
-### Challenge: Write the Implementation for the Die constructor
+# Challenge: Write the Implementation for the Die constructor
 
 Can you write the code that will correctly initialize a die? What should the initial value
 for **Sides** and **LastRolled** be?
@@ -226,7 +209,7 @@ to connect with your `Scripts` folder. This is where you will write all of your
 test code.
 
 ## Create a DieTest Class
-
+{: .no_toc }
 1. Open the `Tests` folder
 2. Open the `Tests/Model` folder
 3. Right click and select `Create` > `Testing` `C# Test Script`
@@ -236,7 +219,7 @@ test code.
 ![Create DieTest](../imgs/01-DieRoller/02-DieTest.gif)
 
 ### The First Test
-
+{: .no_toc }
 The main idea behind Unit Testing is to test small units of code. For our
 first test, let's check that our constructor initializes a Die properly.
 
@@ -287,7 +270,7 @@ initialized in the way we expect. In this case, we assert the number of
 initialized to 1.
 
 ### Running the Test
-
+{: .no_toc }
 So, you've added a test. How do you run it?
 
 In Unity, you can access the `Test Runner` panel from the top menu: 
@@ -374,7 +357,7 @@ have a bug related to `Sides` being less than 2 that makes it past constructing
 a `Die`.
 
 ## Testing for Exceptions
-
+{: .no_toc }
 Using exceptions is so useful that the test framework provides tools for testing that
 exceptions are thrown in specific situations! Let's add in an exception test to give
 ourselves confidence that our program will throw an exception when sides is less than 2.
@@ -399,7 +382,7 @@ doing. The important part here is to know that it is **asserting** that calling
 being thrown.
 
 ## Run the Test
-
+{: .no_toc }
 Back in Unity, your `Test Runner` panel should now have the
 `TestDieThrowsIllegalArgument` test. If you would like, you can run all tests
 again. Alternatively, you can right click on an individual test to run it alone.
@@ -411,7 +394,7 @@ again. Alternatively, you can right click on an individual test to run it alone.
 ![All Tests Pass](../imgs/01-DieRoller/08-AsllTestsPass.png)
 
 # 03. What does a Die do?
-
+{: .no_toc }
 Next, let's define what actions can be taken using a die.
 
 Previously, you were asked to think about what actions can you take with a
@@ -543,13 +526,13 @@ public void Test12SidedDie()
 
 This test works the same as the 6 sided die test but with a 12 sided die.
 
-## Challenge: Implement the Roll Method
+# Challenge: Implement the Roll Method
 
 With your method stub in place as well as a few unit tests to give you
 confidence that they are working, can you write an implementation to the `Roll`
 method?
 
-## Good Time to Commit
+# Good Time to Commit
 
 Now would be a good time to make a `git` commit. You just finished a feature.
 More specifically, you just implemented a `Die` class which models a fair die.

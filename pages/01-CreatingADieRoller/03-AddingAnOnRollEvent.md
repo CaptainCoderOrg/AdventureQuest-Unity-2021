@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: page
 title: "Chapter 3: An OnRoll Event"
 nav_order: 3
 parent: "Part 1: Creating a Die Roller"
 ---
 
 # Chapter 3: Adding an OnRoll Event
-
+{: .no_toc }
 In this part, you will learn how to add `UnityEvent`s to your scripts and
 update elements on the screen when a `Die` is rolled.
 
@@ -16,24 +16,14 @@ contains 6 `Die Controller`s as well as 6 buttons that can roll each `Die`.
 
 ![Finished Challenge](../imgs/02-DieRollerScene/21-FinishedChallenge.png)
 
-## Join the Discussion
-
-If you get stuck, have questions, or want to provide feedback for this part of
-the project, you can join the discussion here:
-[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/5)
-
-- [Chapter 3: Adding an OnRoll Event](#chapter-3-adding-an-onroll-event)
-  - [Join the Discussion](#join-the-discussion)
-- [00. Organize Your Hierarchy](#00-organize-your-hierarchy)
-- [01. Adding a Text Component](#01-adding-a-text-component)
-  - [Challenge: Center Title at the Top of the Screen](#challenge-center-title-at-the-top-of-the-screen)
-- [02. Add a Result Label to a Die Button](#02-add-a-result-label-to-a-die-button)
-- [03. Adding an OnRoll listener to DieController](#03-adding-an-onroll-listener-to-diecontroller)
-  - [Test it Out](#test-it-out)
-  - [Good Time to Commit](#good-time-to-commit)
-- [Challenge: Add Die Labels to All Buttons](#challenge-add-die-labels-to-all-buttons)
-- [What's Next?](#whats-next)
-
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # 00. Organize Your Hierarchy
 
@@ -61,7 +51,7 @@ For practice, let's start by adding a "title" to the scene that says "Die Roller
 
 This is the same type of element as the text on the button's you've added previously.
 
-## Challenge: Center Title at the Top of the Screen
+# Challenge: Center Title at the Top of the Screen
 
 * Update the `TextMeshPro - Text` component on `Title`
   * Change the title to "Die Roller!"
@@ -245,18 +235,11 @@ When the `OnRollString` event is invoked, it will send the `string` to the
 `Label` which then uses that `string` to update its `text` property.
 
 ## Test it Out
-
+{: .no_toc }
 If all went well, you should now be able to run your program, click the `d4`
 button and see the text update. Give it a try!
 
 ![Try it](../imgs/03-AddingAnOnRoll/11-TestIt.gif)
-
-## Good Time to Commit
-
-Now would be a good time to make a `git` commit. You just finished a feature.
-More specifically, you just added a `OnRollString` event to the `DieController`.
-Before committing, be sure you save your `Die Roller` scene (Unity doesn't auto
-save for you).
 
 # Challenge: Add Die Labels to All Buttons
 
@@ -266,6 +249,13 @@ when it is clicked?
 When you're done, your scene should look and act similar to this:
 
 ![Finished Die Roller](../imgs/03-AddingAnOnRoll/12-FinishedChallenge.gif)
+
+# Good Time to Commit
+
+Now would be a good time to make a `git` commit. You just finished a feature.
+More specifically, you just added a `OnRollString` event to the `DieController`.
+Before committing, be sure you save your `Die Roller` scene (Unity doesn't auto
+save for you).
 
 # What's Next?
 

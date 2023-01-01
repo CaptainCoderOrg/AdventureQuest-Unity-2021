@@ -1,19 +1,23 @@
 ---
-layout: default
+layout: page
 title: "Chapter 0: Setup"
 nav_order: 1
 ---
 # Chapter 0: Setup
+{: .no_toc }
 
 In this section, you will import the base `Adventure Quest` project into Unity.
 Before starting, you should ensure you have `Unity 2021.3.XX`. Although this
 project may work with other versions, it has not been tested.
 
-## Join the Discussion
-
-If you get stuck, have questions, or want to provide feedback for this part of
-the project, you can join the discussion here:
-[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/2)
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # 01. Get the Project Template
 
@@ -88,7 +92,7 @@ compatibility.
 
 The first time the project is opened, it will take several minutes to load. 
 
-## Good Time to Commit
+# Good Time to Commit
 
 Now would be a good time to make a `git` commit. You just finished a **chore**.
 More specifically, you just initialized the Adventure Quest Unity project.

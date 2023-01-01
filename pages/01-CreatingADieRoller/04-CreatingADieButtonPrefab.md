@@ -1,12 +1,12 @@
 ---
-layout: default
+layout: page
 title: "Chapter 4: Die Button Prefab"
 nav_order: 4
 parent: "Part 1: Creating a Die Roller"
 ---
 
 # Chapter 4: Creating a Die Button Prefab
-
+{: .no_toc }
 If you completed the challenge at the end of Part 3, you may have felt that
 "wiring" up all the labels, controllers, and buttons was incredibly tedious. If
 you decide to make changes to the buttons in the future, it will be painful to
@@ -21,29 +21,14 @@ When you're ready, your scene should look and act similar to this:
 
 ![Finished Die Roller](../imgs/03-AddingAnOnRoll/12-FinishedChallenge.gif)
 
-## Join the Discussion
-
-If you get stuck, have questions, or want to provide feedback for this part of
-the project, you can join the discussion here:
-[LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/6)
-
-
-- [Chapter 4: Creating a Die Button Prefab](#chapter-4-creating-a-die-button-prefab)
-  - [Join the Discussion](#join-the-discussion)
-- [01. Creating a Die Button Prefab](#01-creating-a-die-button-prefab)
-  - [Create a Folder for Prefabs](#create-a-folder-for-prefabs)
-  - [Create a Prefab from an Existing GameObject](#create-a-prefab-from-an-existing-gameobject)
-- [02. Creating a DieButton Script](#02-creating-a-diebutton-script)
-- [03. Requiring a DieController](#03-requiring-a-diecontroller)
-- [04. Add Listener's to the Button and Die Controller](#04-add-listeners-to-the-button-and-die-controller)
-  - [Test the Die Button in the Die Roller Scene](#test-the-die-button-in-the-die-roller-scene)
-- [05. Adding Prefabs to the Scene](#05-adding-prefabs-to-the-scene)
-- [06. Adding a ButtonLabel property to a DieButton](#06-adding-a-buttonlabel-property-to-a-diebutton)
-  - [Test it in the Scene](#test-it-in-the-scene)
-  - [Good Time to Commit](#good-time-to-commit)
-- [Challenge: Add an OnLabelChange Event to the Die Button Prefab](#challenge-add-an-onlabelchange-event-to-the-die-button-prefab)
-- [Challenge: Add the Remaining DieButton Prefabs to the Scene](#challenge-add-the-remaining-diebutton-prefabs-to-the-scene)
-- [What's Next](#whats-next)
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 # 01. Creating a Die Button Prefab
 
@@ -61,7 +46,7 @@ for a `GameObject` we would like to add to a `Scene`. If we update the `Prefab`
 it will update all of the `GameObject`s throughout the project that use it.
 
 ## Create a Folder for Prefabs
-
+{: .no_toc }
 As always, we want to manage the complexity of our project. Let's start by
 creating a place to store our prefabs.
 
@@ -73,7 +58,7 @@ creating a place to store our prefabs.
 ![Create Prefab Folder](../imgs/04-DieButtonPrefab/00-CreatePrefabFolder.gif)
 
 ## Create a Prefab from an Existing GameObject
-
+{: .no_toc }
 Our `d4 Group` will serve as the initial template for our `Prefab`. To turn an
 existing object into a `Prefab` you can drag it into a folder within the
 `Project` panel.
@@ -212,7 +197,7 @@ Finally, we must register the `Label` on the `DieController`'s `OnRollString` ev
 ![Function Update text](../imgs/04-DieButtonPrefab/07-FunctionUpdateText.gif)
 
 ## Test the Die Button in the Die Roller Scene
-
+{: .no_toc }
 Before continuing, test that the `DieButton` `Prefab` is working as expected.
 
 1. Return to the `Scene` by clicking the `<` button near the top of the Hierarchy` panel.
@@ -298,7 +283,7 @@ void Start()
 ```
 
 ## Test it in the Scene
-
+{: .no_toc }
 Before continuing, verify that the `ButtonLabel` field is visible in the
 `Inspector` and that when you run the `Scene` the field is updated to match the
 expected value.
@@ -307,7 +292,7 @@ expected value.
 
 ![Validate Button Label](../imgs/04-DieButtonPrefab/12-ValidateButtonLabel.gif)
 
-## Good Time to Commit
+# Good Time to Commit
 
 Now would be a good time to make a `git` commit. Since you have not yet finished
 a feature, this would be a work-in-progress commit . More specifically, you just
