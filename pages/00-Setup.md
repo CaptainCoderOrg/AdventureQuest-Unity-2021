@@ -41,7 +41,7 @@ Desktop`. If you have a preferred way of cloning the repository, you can skip to
 
 1.  Click `Code` > `Open with GitHub Desktop`
 
-![Open with GitHub Desktop](imgs//00%20-%20Setup/03-OpenWithGHD.png)
+![Open with GitHub Desktop](imgs/00%20-%20Setup/03-OpenWithGHD.png)
 
 This should launch GitHub Desktop.
 
@@ -50,9 +50,23 @@ This should launch GitHub Desktop.
 
 6. Click `Clone`
 
-![Click Clone](imgs//00%20-%20Setup/04-ClickClone.png)
+![Click Clone](imgs/00%20-%20Setup/04-ClickClone.png)
 
-After a few moments, the template will be cloned to your computer. You are now
+After a few moments, the template will be cloned to your computer. 
+
+## Creating a Development branch
+{: .no_toc }
+
+It is typically considered bad practice to work directly on your projects `main`
+branch. Instead, your team will typically have a development branch that will
+eventually be added to `main` when your project is ready to be released.
+
+Before beginning, you should create a `development` branch. Below are instructions
+to create a branch using **GitHub Desktop**:
+
+{% include GitHub/NewBranch.md branch_name="development" %}
+
+You are now
 ready for [02. Adding Project to Unity Hub](#02-adding-project-to-unity-hub)
 
 ## Option 2 - Download Zip (Not Recommended)
@@ -64,7 +78,7 @@ repository and you will not be able to make incremental commits.
 If you do not have a GitHub account, you can download the template as a ZIP by
 clicking `Code` > `Download ZIP`:
 
-![Download Zip](imgs//00%20-%20Setup/01-DownloadZip.png)
+![Download Zip](imgs/00%20-%20Setup/01-DownloadZip.png)
 
 
 # 02. Adding Project to Unity Hub
@@ -80,16 +94,16 @@ compatibility.
 3. Click the arrow next to the `Open` button.
 4. Click `Add project from disk`
 
-![Add Project from Disk](imgs//00%20-%20Setup/05-AddProject.png)
+![Add Project from Disk](imgs/00%20-%20Setup/05-AddProject.png)
 
 5. Navigate to your repository and select the folder within called "Adventure
    Quest". This folder should contain a folder called `Assets`.
 
-![Select Folder](imgs//00%20-%20Setup/SelectFolder.gif)
+![Select Folder](imgs/00%20-%20Setup/SelectFolder.gif)
 
 6. The `Adventure Quest` project should now appear in Unity Hub. Double Click to open it.
 
-![Open Project](imgs//00%20-%20Setup/07-OpenProject.png)
+![Open Project](imgs/00%20-%20Setup/07-OpenProject.png)
 
 The first time the project is opened, it will take several minutes to load. 
 
@@ -97,6 +111,8 @@ The first time the project is opened, it will take several minutes to load.
 
 Now would be a good time to make a `git` commit. You just finished a **chore**.
 More specifically, you just initialized the Adventure Quest Unity project.
+
+{% include GitHub/CreateCommit.md %}
 
 # What's next?
 

@@ -20,6 +20,15 @@ tests are passing.
 {:toc}
 </details>
 
+# 00. Create a Feature Branch
+
+You're about to start a new feature! Over the next 3 chapters, you will be
+implementing a `Die Roller Scene`. Before beginning, you should create a
+feature branch named `{username}/die-roller-scene`.
+
+{% include GitHub/NewBranch.md branch_name="username/die-roller-scene" %}
+
+
 # 01. Create a Scene
 
 A **Scene** in Unity is where you work with part of a game or application. In
@@ -420,6 +429,8 @@ More specifically, you just implemented a simple `DieController`. Before
 committing, be sure you save your `Die Roller` scene (Unity doesn't auto save
 for you).
 
+{% include GitHub/CreateCommit.md %}
+
 # Challenge: Create a Set of Dice
 
 Using everything you've done so far, can you create a set of Table Top Role
@@ -440,6 +451,7 @@ When you're finished, your `Hierarchy` should match this one:
 And your scene should look similar to this:
 
 ![Finished Challenge](../imgs/02-DieRollerScene/21-FinishedChallenge.png)
+
 
 # What's Next?
 

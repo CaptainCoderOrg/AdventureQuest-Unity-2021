@@ -257,6 +257,8 @@ More specifically, you just added a `OnRollString` event to the `DieController`.
 Before committing, be sure you save your `Die Roller` scene (Unity doesn't auto
 save for you).
 
+{% include GitHub/CreateCommit.md %}
+
 # What's Next?
 
 If you've completed the challenge, you may have felt that "wiring" up all the

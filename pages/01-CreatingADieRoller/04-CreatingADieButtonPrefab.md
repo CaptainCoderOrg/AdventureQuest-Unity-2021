@@ -293,10 +293,13 @@ expected value.
 
 # Good Time to Commit
 
-Now would be a good time to make a `git` commit. Since you have not yet finished
-a feature, this would be a work-in-progress commit . More specifically, you just
-added a `Die Button Prefab`. Before committing, be sure you save your `Die
-Roller` scene (Unity doesn't auto save for you).
+Now would be a good time to make a `git` commit.
+Since you have not yet finished a feature, this would be a work-in-progress
+commit . More specifically, you just added a `Die Button Prefab`. Before
+committing, be sure you save your `Die Roller` scene (Unity doesn't auto save
+for you).
+
+{% include GitHub/CreateCommit.md %}
 
 # Challenge: Add an OnLabelChange Event to the Die Button Prefab
 
@@ -337,6 +340,16 @@ from the `Die Roller` `Scene` and add `Die Button` `Prefab`s in their place.
 When you're finished, your scene should look and act like this:
 
 ![Final Challenge Complete](../imgs/04-DieButtonPrefab/13-FinalChallengeComplete.gif)
+
+# Good Time to Merge
+
+Now would be a good time to make a `git` commit and merge into `development`.
+You have just finished a feature. More specifically, you have implemented a Die
+Roller Scene.
+
+{% include GitHub/CreateCommit.md %}
+
+{% include GitHub/Merge.md %}
 
 # What's Next
 

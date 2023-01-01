@@ -46,6 +46,18 @@ way we expect it to. This is particularly helpful because we can test parts of
 our program without running the game itself. These types of tests are called
 **Unit Test** (they test small "units" of code).
 
+# 00. Create a Feature Branch
+
+It is considered bad practice to work directly on a branch that others might be
+using (e.g. `main`/`development`). If you're the only one working on a project,
+it can be tempting to do this (and you probably won't run into any issues). In
+this project, we will focus on good practices. Thus, you should create a feature
+branch. Branch naming is different from team to team but for this project I am
+going to recommend using `{username}/{feature-name}`.
+
+{% include GitHub/NewBranch.md branch_name="username/die-class" %}
+
+
 # 01. The Die Class
 
 When programming, it is often useful to model real world objects as data. We can
@@ -544,8 +556,13 @@ method?
 
 # Good Time to Commit
 
-Now would be a good time to make a `git` commit. You just finished a feature.
-More specifically, you just implemented a `Die` class which models a fair die.
+Now would be a good time to make a `git` commit and merge into your
+`development` branch. You just finished a feature. More specifically, you just
+implemented a `Die` class which models a fair die.
+
+{% include GitHub/CreateCommit.md %}
+
+{% include GitHub/Merge.md %}
 
 # What's Next?
 
