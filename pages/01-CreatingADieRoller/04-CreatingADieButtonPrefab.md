@@ -154,7 +154,7 @@ Next, add the `DieButton` script to the `DieButton` `Prefab`.
 `DieController` script as well! This is because the `DieButton` script enforces
 that the `GameObject` it is attached to must have a `DieController`.
 
-# 04. Add Listener's to the Button and Die Controller
+# 04. Add Listeners to the Button and Die Controller
 
 Now that we have a `Die Controller`, we can register it on the `Die Button`'s
 `Button` listener.
