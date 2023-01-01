@@ -6,16 +6,15 @@ parent: "Part 1: Creating a Die Roller"
 ---
 
 # Chapter 4: Creating a Die Button Prefab
-{: .no_toc }
-If you completed the challenge at the end of Part 3, you may have felt that
-"wiring" up all the labels, controllers, and buttons was incredibly tedious. If
-you decide to make changes to the buttons in the future, it will be painful to
-update all of them again. In this section, we will learn how to create a
-`Prefab` for a `Die Button` to manage the complexity of adding new buttons and
-updating existing buttons.
+{: .no_toc } If you completed the challenge at the end of [Chapter 3: Adding an
+OnRoll Event], you may have felt that "wiring" up all the labels, controllers,
+and buttons was incredibly tedious. If you decide to make changes to the buttons
+in the future, it will be painful to update all of them again. In this section,
+we will learn how to create a `Prefab` for a `Die Button` to manage the
+complexity of adding new buttons and updating existing buttons.
 
-Before starting this section, you should complete [Part 3 - Adding an OnRoll
-Event](../03-OnRollEvent/README.md) as well as the challenge at the end.
+Before starting this section, you should complete [Chapter 3: Adding an OnRoll
+Event] as well as the challenge at the end.
 
 When you're ready, your scene should look and act similar to this:
 
@@ -315,7 +314,7 @@ when the `DieButton` starts: To do this, you will:
 4. Register the `Button`'s `Text` component to listen to the `OnLabelChange` event
    * When it occurs, the `TextMeshPro`'s `text` property should update
 
-**Hint:** In [Part 3](../03-OnRollEvent/README.md), we added an `OnRollString`
+**Hint:** In [Chapter 3], we added an `OnRollString`
 event to the `DieController`. You should be able to apply the same steps here.
 
 When you've finished the `DieButton` component should look like this:
@@ -355,3 +354,7 @@ is 24 (2*6 + 3*4) but what are the odds of rolling a `12`?
 
 When you're ready, continue to [Part 5: Modeling a Dice Group](../05-DiceGroup/README.md)
 
+---
+[Chapter 3]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}
+
+[Chapter 3: Adding an OnRoll Event]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}

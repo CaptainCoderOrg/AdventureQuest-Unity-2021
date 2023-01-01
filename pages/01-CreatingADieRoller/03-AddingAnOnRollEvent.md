@@ -10,9 +10,9 @@ parent: "Part 1: Creating a Die Roller"
 In this part, you will learn how to add `UnityEvent`s to your scripts and
 update elements on the screen when a `Die` is rolled.
 
-Before starting, you should have finished the challenge at the end of [Part 2 -
-Creating a Die Roller Scene](../02-DieRoller/README.md) and have a scene that
-contains 6 `Die Controller`s as well as 6 buttons that can roll each `Die`.
+Before starting, you should finish the challenge at the end of [Chapter 2:
+Creating a Die Roller Scene] and have a scene that contains 6 `Die Controller`s
+as well as 6 buttons that can roll each `Die`.
 
 ![Finished Challenge](../imgs/02-DieRollerScene/21-FinishedChallenge.png)
 
@@ -266,5 +266,10 @@ again. In the next section, we will learn how to create a `Prefab` for a `Die
 Button` to make it easy to add new buttons and more importantly update old
 buttons!
 
-After you have completed the challenge, you should proceed to [Part 4: Creating
-a Die Button Prefab](../04-DieButtonPrefab/README.md)
+After you have completed the challenge, you should proceed to [Chapter 4:
+Creating a Die Button Prefab]
+
+---
+[Chapter 2: Creating a Die Roller Scene]: {% link pages/01-CreatingADieRoller/02-CreatingADieRollerScene.md %}
+
+[Chapter 4: Creating a Die Button Prefab]: {% link pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.md %}

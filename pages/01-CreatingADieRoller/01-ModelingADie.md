@@ -141,18 +141,25 @@ public class Die
 }
 ```
 
-Notice, both `Sides` and `LastRolled` are `public int` values with a `get`. This
-is because those values are **observable**.
+Both `Sides` and `LastRolled` are `public` properties with a `get`. When we mark
+a property `public` it exposes that value so it can be accessed throughout the
+program. This is often called a **getter** (thus the word `get`).
 
-However, `Sides` does not have a `set`. This is because that value **never changes**.
+However, `Sides` does not have a `set` (setter). This is because that value **never
+changes**. When you have a property that cannot be changed, we say that it is
+**immutable**. In general, making variables **immutable** is a good practice
+because it typically reduces complexity.
 
-Additionally, `LastRolled` has a `private set`. This is because the value that
-was `LastRolled` should not be something that can simply be changed. Instead,
-there will be specific rules for how this value is set. 
+Additionally, `LastRolled` has a `private set`. When we mark a property
+`private` we do **NOT** expose it to the rest of the program. Instead, we
+enforce that the property may only be modified within the class it was defined.
+If a variable needs to change, it is a good practice reduce the number of ways
+the variable can be modified. This is often called the [Principle of least
+privilege].
 
-**Note**: Using a `private set` is generally considered a good practice because
-it limits the number of ways the value can be modified. This practice is
-typically called **encapsulation**.
+In this case, `LastRolled` has specific rules for how the value will be set. By
+marking it **private** we can guarantee that the value will not be modified
+outside of this class, thus reducing the complexity of the program.
 
 ## Constructing a Die
 {: .no_toc }
@@ -345,16 +352,16 @@ public Die(int sides)
 }
 ```
 
-Notice, the error message explains **WHY** the exception happens. This message
+This code allows you to manage the complexity of your program because you now
+know that the `Sides` property is guaranteed to be at least 2. Any bug related
+to `Sides` being less than 2 will be reported during construction of a `Die`.
+
+{: .note }
+The error message explains **WHY** the exception happens. This message
 is **NOT** designed for the user of the program but instead for someone working
 on the code (you or your dev-team). If the developer writes code that has a
 negative sides value, they will know immediately when the program attempts to
 construct the die what the variable `sides` contains.
-
-This code allows you to manage the complexity of your program because you now
-know that the `Sides` property is guaranteed to be at least 2. You should never
-have a bug related to `Sides` being less than 2 that makes it past constructing
-a `Die`.
 
 ## Testing for Exceptions
 {: .no_toc }
@@ -540,5 +547,9 @@ More specifically, you just implemented a `Die` class which models a fair die.
 # What's Next?
 
 With a model in place for a `Die` we are ready to create a Die Roller Scene!
-Once you have passed all of the tests, you should proceed to [Part 2: Creating a
-Die Roller Scene](../02-DieRoller/README.md)
+Once you have passed all of the tests, you should proceed to [Chapter 2: Creating a
+Die Roller Scene]
+
+---
+[Principle of least privilege]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
+[Chapter 2: Creating a Die Roller Scene]: {% link pages/01-CreatingADieRoller/02-CreatingADieRollerScene.md %}

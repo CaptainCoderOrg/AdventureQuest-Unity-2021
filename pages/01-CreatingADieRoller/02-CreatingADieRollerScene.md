@@ -7,8 +7,8 @@ parent: "Part 1: Creating a Die Roller"
 # Chapter 2: Creating a Die Roller Scene
 {: .no_toc }
 In this part, we will be creating a Scene in Unity that allows us to roll
-different sided dice. Before starting, be sure you've completed [Part 1:
-Modeling a Die](../01%20-%20Modeling%20a%20Die/README.md) and that all of your
+different sided dice. Before starting, be sure you've completed [Chapter 1:
+Modeling a Die] and that all of your
 tests are passing.
 
 <details open markdown="block">
@@ -429,7 +429,7 @@ For organization purposes, you should create a parent GameObject for all of your
 dice buttons as well as all of your dice controllers.
 
 Read the Manual: Research the [Horizontal Layout
-Group](https://docs.unity.cn/2021.3/Documentation/Manual/script-HorizontalLayoutGroup.html).
+Group].
 Can you utilize it to position your buttons evenly along the bottom of the
 screen?
 
@@ -445,4 +445,11 @@ And your scene should look similar to this:
 
 Once you've added in several dice buttons, it's time to get the information
 displaying on the screen. To do this, we will learn how to create our own
-`UnityEvent`s. When you're ready, proceed to [03 - Adding an OnRoll Event](../03-OnRollEvent/README.md).
+`UnityEvent`s. When you're ready, proceed to [Chapter 3: Adding an OnRoll Event].
+
+---
+
+[Horizontal Layout Group]: https://docs.unity.cn/2021.3/Documentation/Manual/script-HorizontalLayoutGroup.html
+
+[Chapter 1: Modeling a Die]: {% link pages/01-CreatingADieRoller/01-ModelingADie.md %}
+[Chapter 3: Adding an OnRoll Event]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}

@@ -6,3 +6,11 @@ url: https://adventurequest.captaincoder.org
 
 # aux_links:
 #   Project Template: https://github.com/jcollard/AdventureQuest-Unity-2021
+
+callouts:
+  warning:
+    title: Warning
+    color: red
+  note:
+    title: note
+    color: yellow

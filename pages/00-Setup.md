@@ -57,7 +57,8 @@ ready for [02. Adding Project to Unity Hub](#02-adding-project-to-unity-hub)
 
 ## Option 2 - Download Zip (Not Recommended)
 
-**Note:** If you use this option, your project will not be connected to a GitHub
+{: .note }
+If you use this option, your project will not be connected to a GitHub
 repository and you will not be able to make incremental commits.
 
 If you do not have a GitHub account, you can download the template as a ZIP by
@@ -99,6 +100,8 @@ More specifically, you just initialized the Adventure Quest Unity project.
 
 # What's next?
 
-With the project setup and ready to go, you can proceed to [Part 1: Modeling a
-Die](../01%20-%20Modeling%20a%20Die/README.md).
+With the project setup and ready to go, you can proceed to [Part 1: Modeling a Die].
 
+---
+
+[Part 1: Modeling a Die]: {% link pages/01-CreatingADieRoller/00-Part1-ModelingADie.md %}
