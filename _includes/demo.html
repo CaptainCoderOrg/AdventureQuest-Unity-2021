@@ -1,0 +1,22 @@
+
+<script>
+    function load_demo(path)
+    {
+        document.getElementById("unity-demo").innerHTML = `
+        <iframe src="${path}"
+        width="640"
+        height="360"
+        style="overflow:visible; overflow-y: visible; overflow-x: visible;"
+        scrolling="no"
+        allowfullscreen="" 
+        frameborder="0" >
+        </iframe>        
+        `
+    }
+</script>
+
+<div id="unity-demo" style="width: 640px; height:360px; border:1px solid black;">
+    <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+        <h1><a href="javascript:load_demo('{{include.path}}')">Launch Demo</a></h1>
+    </div>
+</div>

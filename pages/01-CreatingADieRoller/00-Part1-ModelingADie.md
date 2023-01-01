@@ -20,6 +20,11 @@ games bring out giant sacks of dice with varying sizes and combinations.
 In this part, you will create a Die Roller Scene in Unity that allows the user
 to simulate rolling multi-sided dice.
 
+When you're finished, you will have a project that looks and acts similar to 
+the demo below:
+
+{% include demo.html path="/demos/part1/index.html" %}
+
 ## [Chapter 1: Modeling a Die]
 
 In this chapter, you will have written a `Die` class which models a multi-sided
