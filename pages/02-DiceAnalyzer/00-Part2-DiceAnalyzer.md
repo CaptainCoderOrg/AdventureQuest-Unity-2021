@@ -6,3 +6,5 @@ has_children: true
 ---
 
 # Part 2: Dice Analyzer
+
+{% include demo.html path="/demos/part2/index.html" %}

@@ -176,8 +176,8 @@ By default, Unity sets a button to be `160` pixels wide and `30` pixels tall. Be
 set our canvas to have a size of `1920x1080` the button appears quite small on the screen.
 Let's update the size!
 
-1. Set the buttons width to be 300
-2. Set the buttons height to be 200
+1. Set the buttons width to something more reasonable (I used `300`)
+2. Set the buttons height to something more reasonable (I used `100`)
 
 ![Change Size](../imgs/02-DieRollerScene/10-ChangeSize.png)
 
@@ -191,7 +191,7 @@ in the scene that happens to be nested within the `Button`.
 4. Find the `TextMeshPro` component in the `Inspector`
    * You may have to scroll down to find it. 
 5. Change the Text from `Button` to `Roll Die!`
-6. Change the `Font Size` to be `72`.
+6. Change the `Font Size` to something more reasonable (I used `72`).
 
 ![Update Button Text](../imgs/02-DieRollerScene/11-UpdateButtonText.png)
 
@@ -264,7 +264,7 @@ enters the scene (when it "starts"). This acts similar to a constructor for
 `MonoBehaviour`s and gives us an opportunity to initialize it. In this case,
 we initialize the variable to be a new `Die` with 6 sides.
 
-3. Add a Roll method which rolls `Die` and reports the result using `Debug.Log`
+3. Add a Roll method which calls `_die.Roll()` and reports the result using `Debug.Log`
 
 ```csharp
 public class DieController : MonoBehaviour
@@ -273,15 +273,15 @@ public class DieController : MonoBehaviour
     
     public void Roll()
     {
-        _die = new Die(Sides);
+        _die.Roll();
         Debug.Log($"Rolled a {_die.LastRolled}");
     }
 }
 ```
 
-The above method calls the `Die.Roll` method which causes the state of the `Die`
-to change. Then, using `Debug.Log` displays the result of the roll in Unity's
-console. All that is left to do is connect it to our button!
+The above method calls the `Roll` method of `_die` which causes the state of the
+`Die` to change. Then, using `Debug.Log` displays the result of the roll in
+Unity's console. All that is left to do is connect it to our button!
 
 # 08. Adding a DiceController to the Scene
 

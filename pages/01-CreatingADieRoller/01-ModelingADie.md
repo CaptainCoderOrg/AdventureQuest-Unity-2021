@@ -73,7 +73,7 @@ Let's start by creating a `Die` class in the `Scripts/Model` folder.
 6. Double click to open the script.
 
 By default, Unity will have added in default code for a `MonoBehaviour`. Start by
-replacing the entire contents with the code below:
+replacing the **entire** contents with the code below:
 
 ```csharp
 using UnityEngine;
@@ -201,8 +201,11 @@ how should we initialize the properties?
 
 # Challenge: Write the Implementation for the Die constructor
 
-Can you write the code that will correctly initialize a die? What should the initial value
-for **Sides** and **LastRolled** be?
+Can you write the code that will correctly initialize a die? 
+
+* What should the initial value for `Sides` be?
+* What should the initial value for `LastRolled` be?
+  * **Hint**: What does the comment for `LastRolled` say?
 
 # 02. The DieTest Class
 

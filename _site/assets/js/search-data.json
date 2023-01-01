@@ -41,444 +41,450 @@
     "url": "/pages/02-DiceAnalyzer/00-Part2-DiceAnalyzer.html",
     "relUrl": "/pages/02-DiceAnalyzer/00-Part2-DiceAnalyzer.html"
   },"7": {
+    "doc": "Part 2: Dice Analyzer",
+    "title": "Launch Demo",
+    "content": " ",
+    "url": "/pages/02-DiceAnalyzer/00-Part2-DiceAnalyzer.html",
+    "relUrl": "/pages/02-DiceAnalyzer/00-Part2-DiceAnalyzer.html"
+  },"8": {
     "doc": "Chapter 0: Setup",
     "title": "Chapter 0: Setup",
     "content": "In this section, you will import the base Adventure Quest project into Unity. Before starting, you should ensure you have Unity 2021.3.XX. Although this project may work with other versions, it has not been tested. | 01. Get the Project Template . | Option 1 - Using GitHub (Recommended) | Option 2 - Download Zip (Not Recommended) | . | 02. Adding Project to Unity Hub | Good Time to Commit | What’s next? | . ",
     "url": "/pages/00-Setup.html",
     "relUrl": "/pages/00-Setup.html"
-  },"8": {
+  },"9": {
     "doc": "Chapter 0: Setup",
     "title": "01. Get the Project Template",
     "content": "You can access the project template on GitHub here: LINK . ",
     "url": "/pages/00-Setup.html#01-get-the-project-template",
     "relUrl": "/pages/00-Setup.html#01-get-the-project-template"
-  },"9": {
+  },"10": {
     "doc": "Chapter 0: Setup",
     "title": "Option 1 - Using GitHub (Recommended)",
     "content": ". | If you have a GitHub account, select Use this Template &gt; Create a new Repository | . | Give your repository a name. I recommend calling it AdventureQuest. | Click Create repository from template | . After a few second your copy of the template should be available. Next, you will clone the repository. I’ve provided instructions below for using GitHub Desktop. If you have a preferred way of cloning the repository, you can skip to 02. Adding Project to Unity Hub . | Click Code &gt; Open with GitHub Desktop | . This should launch GitHub Desktop. | Take note of the Local path setting. This is where the repository will be cloned. Optionally you can change the Local path setting. | Click Clone . | . After a few moments, the template will be cloned to your computer. You are now ready for 02. Adding Project to Unity Hub . ",
     "url": "/pages/00-Setup.html#option-1---using-github-recommended",
     "relUrl": "/pages/00-Setup.html#option-1---using-github-recommended"
-  },"10": {
+  },"11": {
     "doc": "Chapter 0: Setup",
     "title": "Option 2 - Download Zip (Not Recommended)",
     "content": "If you use this option, your project will not be connected to a GitHub repository and you will not be able to make incremental commits. If you do not have a GitHub account, you can download the template as a ZIP by clicking Code &gt; Download ZIP: . ",
     "url": "/pages/00-Setup.html#option-2---download-zip-not-recommended",
     "relUrl": "/pages/00-Setup.html#option-2---download-zip-not-recommended"
-  },"11": {
+  },"12": {
     "doc": "Chapter 0: Setup",
     "title": "02. Adding Project to Unity Hub",
     "content": "Note: This guide was made using Unity Hub 3.4.1. This project uses Unity 2021.3.16f1. Although this project should convert to any version of Unity 2021, I highly recommend downloading this version for compatibility. | Open Unity Hub | Click the Projects Tab | Click the arrow next to the Open button. | Click Add project from disk | . | Navigate to your repository and select the folder within called “Adventure Quest”. This folder should contain a folder called Assets. | . | The Adventure Quest project should now appear in Unity Hub. Double Click to open it. | . The first time the project is opened, it will take several minutes to load. ",
     "url": "/pages/00-Setup.html#02-adding-project-to-unity-hub",
     "relUrl": "/pages/00-Setup.html#02-adding-project-to-unity-hub"
-  },"12": {
+  },"13": {
     "doc": "Chapter 0: Setup",
     "title": "Good Time to Commit",
     "content": "Now would be a good time to make a git commit. You just finished a chore. More specifically, you just initialized the Adventure Quest Unity project. ",
     "url": "/pages/00-Setup.html#good-time-to-commit",
     "relUrl": "/pages/00-Setup.html#good-time-to-commit"
-  },"13": {
+  },"14": {
     "doc": "Chapter 0: Setup",
     "title": "What’s next?",
     "content": "With the project setup and ready to go, you can proceed to Part 1: Modeling a Die. ",
     "url": "/pages/00-Setup.html#whats-next",
     "relUrl": "/pages/00-Setup.html#whats-next"
-  },"14": {
+  },"15": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Chapter 1: Modeling a Die",
     "content": "Adventure Quest is an adventure game that will take inspiration from table top role playing games such as Dungeons &amp; Dragons, Swords &amp; Sorcery, and Fate Core. In these games, randomness is often accomplished by rolling one or more dice. Adventure Quest will model its randomness in the same way! . That said, we’re not talking about traditional 6 sided die. No, no, no! These games bring out giant sacks of dice with varying sizes and combinations. To do this, we will first write a program that models an individual die. | Code Structure in Adventure Quest | 01. The Die Class | Challenge: Write the Implementation for the Die constructor | 02. The DieTest Class | 03. Ensuring a Die has at least 2 sides | Challenge: Implement the Roll Method | Good Time to Commit | What’s Next? | . ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html"
-  },"15": {
+  },"16": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Code Structure in Adventure Quest",
     "content": "As a programmer, it is our responsibility to manage the complexity of a program. It is far too easy to write a giant pile of spaghetti code in any language. But, when you’re working with something as powerful as Unity, it is even easier! . To help manage the complexity, the project template comes set up with 2 code folders: Scripts and Tests. The Scripts folder will contain the code that runs when Adventure Quest is played while the Tests folder will contain code that helps give us confidence that each of our different components works the way we expect it to. This is particularly helpful because we can test parts of our program without running the game itself. These types of tests are called Unit Test (they test small “units” of code). ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#code-structure-in-adventure-quest",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#code-structure-in-adventure-quest"
-  },"16": {
+  },"17": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "01. The Die Class",
     "content": "When programming, it is often useful to model real world objects as data. We can do this by creating a class. The word class is short for “classification” and allows us to manage complexity by composing data and methods which operate on that data together. Before we begin, try to answer the following questions about a real physical die: . | What properties makes a die a die? What about it can be observed? | What are the actions that I can take with a die? | . These questions will help guide us think about how to write a class that models a die. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#01-the-die-class",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#01-the-die-class"
-  },"17": {
+  },"18": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Create the Die Class",
     "content": "Let’s start by creating a Die class in the Scripts/Model folder. | Open the Scripts folder. | Open the Model folder. | Right click in the Model folder. | Select Create &gt; C# Script. | Rename the file Die. | Double click to open the script. | . By default, Unity will have added in default code for a MonoBehaviour. Start by replacing the entire contents with the code below: . using UnityEngine; namespace AdventureQuest.Dice { public class Die { } } . The first line of code tells the compiler that we want to use code available from the UnityEngine. The next line says that we would like this code to be within a name space called AdventureQuest.Dice. A name space allows us to manage the complexity of a program and separate code that works together. Don’t worry about this too much right now, just know that this is a good habit and practice to have. Within the name space we finally define a class called Die. In this case, we will be composing data together that is a “classification” for a Die. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#create-the-die-class",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#create-the-die-class"
-  },"18": {
+  },"19": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Properties of a Die",
     "content": "Next, let’s define the properties of a Die. Previously, you were asked to think about “What properties make a die a die? What about it can be observed?” . When I think about a die, there are two properties that come to mind: . | A die has a specific number of Sides | A die has a specific number that was Last Rolled | . These will be the two Properties of our die. But, what data type will store these values? Because these values happen to be discrete numbers, we will represent them as integers. Finally, will either of the properties change? . | In the case of Sides, no. The number of sides on a Die never changes. | In the case of LastRolled, yes. The number that is currently seen will need to change. | . With all of this information, we can add these properties to our class: . | Update your code to have 2 properties: Sides and LastRolled | . public class Die { /// &lt;summary&gt; /// The number of sides on this &lt;see cref=\"Die\"/&gt;. This value /// is guaranteed to be greater than or equal to 2. /// &lt;/summary&gt; public int Sides { get; } /// &lt;summary&gt; /// The value that was most recently rolled on this &lt;see cref=\"Die\"/&gt;. /// This value will be between 1 and &lt;see cref=\"Die.Sides\"/&gt;. /// If this &lt;see cref=\"Die\"/&gt; has not been rolled, the value is 1. /// &lt;/summary&gt; public int LastRolled { get; private set; } } . Both Sides and LastRolled are public properties with a get. When we mark a property public it exposes that value so it can be accessed throughout the program. This is often called a getter (thus the word get). However, Sides does not have a set (setter). This is because that value never changes. When you have a property that cannot be changed, we say that it is immutable. In general, making variables immutable is a good practice because it typically reduces complexity. Additionally, LastRolled has a private set. When we mark a property private we do NOT expose it to the rest of the program. Instead, we enforce that the property may only be modified within the class it was defined. If a variable needs to change, it is a good practice reduce the number of ways the variable can be modified. This is often called the Principle of least privilege. In this case, LastRolled has specific rules for how the value will be set. By marking it private we can guarantee that the value will not be modified outside of this class, thus reducing the complexity of the program. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#properties-of-a-die",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#properties-of-a-die"
-  },"19": {
+  },"20": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Constructing a Die",
     "content": "Next, we need a way to create an instance of a Die. To do this, we will define a constructor that allows us to specify the number of Sides it has. | Update your Die class to include a constructor that accepts an int parameter. | . public class Die { // Properties omitted for brevity /// &lt;summary&gt; /// Instantiates a &lt;see cref=\"Die\"/&gt; specifying the number of &lt;paramref /// name=\"sides\"/&gt;. A &lt;see cref=\"Die\"/&gt; must have at least 2 &lt;paramref /// name=\"sides\"/&gt;. /// &lt;/summary&gt; /// &lt;exception cref=\"System.ArgumentException\"&gt; /// Thrown if &lt;paramref name=\"sides\"/&gt; is less than 2. /// &lt;/exception&gt; public Die(int sides) { } } . A constructor is a special method used by a class to specify the requirements to create an object of that type. In this case, a Die can only be created if we are able to specify the number of sides it will have. Because it doesn’t make sense to have a die with fewer than 2 sides (what would that even mean?) we add a comment which specifies that the sides parameter must not be less than 2. In addition to specifying the requirements to create an object, the constructor also implements HOW the object is initialized. In this case, how should we initialize the properties? . ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#constructing-a-die",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#constructing-a-die"
-  },"20": {
+  },"21": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Challenge: Write the Implementation for the Die constructor",
-    "content": "Can you write the code that will correctly initialize a die? What should the initial value for Sides and LastRolled be? . ",
+    "content": "Can you write the code that will correctly initialize a die? . | What should the initial value for Sides be? | What should the initial value for LastRolled be? . | Hint: What does the comment for LastRolled say? | . | . ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#challenge-write-the-implementation-for-the-die-constructor",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#challenge-write-the-implementation-for-the-die-constructor"
-  },"21": {
+  },"22": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "02. The DieTest Class",
     "content": "In the past, you have probably tested your code by simply running it as a console program. In the case of Unity, it isn’t always easy to simply test a small portion of your code. To help manage this complexity, we will utilize Unity’s Test Framework to create Unit Tests. The Template for Adventure Quest comes with a Tests folder that is configured to connect with your Scripts folder. This is where you will write all of your test code. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#02-the-dietest-class",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#02-the-dietest-class"
-  },"22": {
+  },"23": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Create a DieTest Class",
     "content": ". | Open the Tests folder | Open the Tests/Model folder | Right click and select Create &gt; Testing C# Test Script | Rename the file DieTest | Double click to open the file | . The First Test . The main idea behind Unit Testing is to test small units of code. For our first test, let’s check that our constructor initializes a Die properly. | Update your DieTest file to contain the following code: | . using NUnit.Framework; using System.Collections.Generic; using AdventureQuest.Dice; public class DieTest { [Test, Timeout(5000), Description(\"Tests the Die Constructor\")] public void TestDieConstructor() { Die d6 = new (6); Assert.AreEqual(6, d6.Sides); Assert.AreEqual(1, d6.LastRolled); Die d4 = new (4); Assert.AreEqual(4, d4.Sides); Assert.AreEqual(1, d4.LastRolled); } } . The first three lines of code import the name spaces NUnit.Framework, System.Collections.Generic and AdventureQuest.Dice. The first is the framework that provides functionality for writing tests. The second contains functionality for creating lists. The third is the name space we put our Die class. Next, we define the class DieTest which will contain all of the tests associated with the Die class. Just below that, we define a method TestDieConstructor. This method has 3 attributes: Test, Timeout, and Description. The Test attribute tells the compiler that this method is a test and it should show up in Unity as such. The Timeout attribute sets a time limit for how long this test should run (in this case we specify 5000 milliseconds). The Description attribute allows us to add a comment to the test that will appear in Unity. Finally, the body of the TestDieConstructor constructs two instances of the Die class: a d6 and a d4. It also asserts that those instances are initialized in the way we expect. In this case, we assert the number of Sides on each Die is initialized properly as well as LastRolled being initialized to 1. Running the Test . So, you’ve added a test. How do you run it? . In Unity, you can access the Test Runner panel from the top menu: . | Select Window &gt; General &gt; Test Runner. | . You can attach the Test Runner anywhere you think works well for you. Let’s run the test! . | Click Edit Mode in the Test Runner panel. | Click Run All. This will run all C# Test Scripts within the Tests folder. | . If all went well, you should see a series of green check marks. If any of the assertions within a test fails, the test will fail and you will receive a red symbol. If you click on the failing test, you will see the tests description, the assertion that failed, and the file / line number where the assertion failed. If this happens, you can right click on the failing test and select Open error line to bring you to that specific line of code in your code editor. If your TestDieConstructor method is failing, you should do your best to fix it before moving on. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#create-a-dietest-class",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#create-a-dietest-class"
-  },"23": {
+  },"24": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "03. Ensuring a Die has at least 2 sides",
     "content": "You may have noticed the Sides property and Die constructor both mentioned that a Die is guaranteed to have at least 2 sides. By having this guarantee, it helps us (and our dev team) reason about how the object will work in reality. But, what is preventing someone from constructing a Die by passing in a negative number as an argument? If this happened, it could lead to some very strange and undefined behavior later in the game. Another good practice / principle to follow in software development is to Fail-fast. The general idea is: If your program reaches an unexpected state, you should fail (e.g. crash). This helps you identify bugs and problems within your code as early as possible. One way to do this in C# is to throw an exception. An exception is a way to inform the program that it is in an “exceptional state” that it does not know what to do with. For example, if the program discovers that there is a Die with fewer than 2 sides, what should it do? It is undefined! Rather than allowing an undefined behavior (and potentially a hard to find bug), we can instead fail immediately and provide a good error message to help ourselves (or our dev-team) debug the issue. In this case, let’s add in an error check within our Die constructor: . | Update your constructor to throw a System.ArgumentExcepetion if the number of Sides specified is less than 2. | . public Die(int sides) { if (sides &lt; 2) { throw new System.ArgumentException($\"A die must have at least 2 sides but found {sides}.\"); } Sides = sides; LastRolled = 1; } . This code allows you to manage the complexity of your program because you now know that the Sides property is guaranteed to be at least 2. Any bug related to Sides being less than 2 will be reported during construction of a Die. The error message explains WHY the exception happens. This message is NOT designed for the user of the program but instead for someone working on the code (you or your dev-team). If the developer writes code that has a negative sides value, they will know immediately when the program attempts to construct the die what the variable sides contains. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#03-ensuring-a-die-has-at-least-2-sides",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#03-ensuring-a-die-has-at-least-2-sides"
-  },"24": {
+  },"25": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Testing for Exceptions",
     "content": "Using exceptions is so useful that the test framework provides tools for testing that exceptions are thrown in specific situations! Let’s add in an exception test to give ourselves confidence that our program will throw an exception when sides is less than 2. | Update your DieTest class to test for exceptions: | . [Test, Timeout(5000), Description(\"Tests that a Die must be constructed with at least 2 sides\")] public void TestDieThrowsIllegalArgument() { Assert.Throws&lt;System.ArgumentException&gt;(() =&gt; new Die(1)); Assert.Throws&lt;System.ArgumentException&gt;(() =&gt; new Die(0)); Assert.Throws&lt;System.ArgumentException&gt;(() =&gt; new Die(-1)); Assert.Throws&lt;System.ArgumentException&gt;(() =&gt; new Die(-10)); Assert.Throws&lt;System.ArgumentException&gt;(() =&gt; new Die(-50)); } . For now, don’t worry too much about understanding EXACTLY what this code is doing. The important part here is to know that it is asserting that calling new Die(1), new Die(0), etc…, results in a System.ArgumentException being thrown. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#testing-for-exceptions",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#testing-for-exceptions"
-  },"25": {
+  },"26": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Run the Test",
     "content": "Back in Unity, your Test Runner panel should now have the TestDieThrowsIllegalArgument test. If you would like, you can run all tests again. Alternatively, you can right click on an individual test to run it alone. | Before continuing, run your test and ensure it is working | . ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#run-the-test",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#run-the-test"
-  },"26": {
+  },"27": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "03. What does a Die do?",
     "content": "Next, let’s define what actions can be taken using a die. Previously, you were asked to think about what actions can you take with a physical die. When I think about a die, there is one main action that comes to mind: . | Rolling the die Roll() | . This action will become a method that: . | Randomly selects a value between 1 and Sides | Updates the LastRolled value | Returns that value | . To do this, we will utilize UnityEngine’s Random class. Since we have added using UnityEngine; at the top of our script, we can call the Random.Range(low, high) method to generate a number within a range. For example: . int randomInt = Random.Range(0, 3); . The code above generates a random number that can be 0, 1, or 2. It is important to understand that the second value will never be returned and is an exclusive upper bound. | Update your Die class to include a definition for a Roll method that accepts no parameters and returns an integer. | . /// &lt;summary&gt; /// Rolls this &lt;see cref=\"Die\"/&gt; setting the &lt;see cref=\"Die.LastRolled\"/&gt; /// parameter to be a value between 1 and &lt;see cref=\"Die.Sides\"/&gt; inclusively. /// For convenience, this method returns the rolled value. /// &lt;/summary&gt; public int Roll() { return -1; } . | Update your DieTest class to include a test rolling a six sided die: | . [Test, Timeout(5000), Description(\"Tests rolling a 6 sided die 1,000 times.\")] public void TestSixSidedDie() { // Construct a 6 sided die Die d6 = new(6); // Before rolling, the die should have a 1 on its face Assert.AreEqual(1, d6.LastRolled); // A 6 sided die should have 6 sides Assert.AreEqual(6, d6.Sides); // Roll this die 1,000 times and make sure it is always a value // between 1 and 6. List&lt;int&gt; values = new(); for (int i = 0; i &lt; 1_000; i++) { int result = d6.Roll(); Assert.AreEqual(result, d6.LastRolled); Assert.LessOrEqual(result, 6); Assert.GreaterOrEqual(result, 1); values.Add(result); } // Check that each result was rolled Assert.Contains(1, values); Assert.Contains(2, values); Assert.Contains(3, values); Assert.Contains(4, values); Assert.Contains(5, values); Assert.Contains(6, values); } . This test constructs a Die with 6 sides and rolls it 1,000 times. Each time it rolls it checks that the result of the roll matches the value of LastRolled and is also between 1 and 6. Finally, after the 1,000 rolls, it checks that each value 1, 2, 3, 4, 5, and 6 were rolled at least once. | Update your DieTest class to include a test rolling a twelve sided die: | . [Test, Timeout(5000), Description(\"Tests rolling a 12 sided die 1,000 times.\")] public void Test12SidedDie() { // Construct a 12 sided die Die d12 = new(12); // Before rolling, the die should have a 1 on its face Assert.AreEqual(1, d12.LastRolled); // A 6 sided die should have 6 sides Assert.AreEqual(12, d12.Sides); // Roll this die 1,000 times and make sure it is always a value // between 1 and 12. List&lt;int&gt; values = new(); for (int i = 0; i &lt; 1_000; i++) { int result = d12.Roll(); Assert.AreEqual(result, d12.LastRolled); Assert.LessOrEqual(result, 12); Assert.GreaterOrEqual(result, 1); values.Add(result); } // Check that each result was rolled Assert.Contains(1, values); Assert.Contains(2, values); Assert.Contains(3, values); Assert.Contains(4, values); Assert.Contains(5, values); Assert.Contains(6, values); Assert.Contains(7, values); Assert.Contains(8, values); Assert.Contains(9, values); Assert.Contains(10, values); Assert.Contains(11, values); Assert.Contains(12, values); } . This test works the same as the 6 sided die test but with a 12 sided die. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#03-what-does-a-die-do",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#03-what-does-a-die-do"
-  },"27": {
+  },"28": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Challenge: Implement the Roll Method",
     "content": "With your method stub in place as well as a few unit tests to give you confidence that they are working, can you write an implementation to the Roll method? . ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#challenge-implement-the-roll-method",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#challenge-implement-the-roll-method"
-  },"28": {
+  },"29": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "Good Time to Commit",
     "content": "Now would be a good time to make a git commit. You just finished a feature. More specifically, you just implemented a Die class which models a fair die. ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#good-time-to-commit",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#good-time-to-commit"
-  },"29": {
+  },"30": {
     "doc": "Chapter 1: Modeling a Die",
     "title": "What’s Next?",
     "content": "With a model in place for a Die we are ready to create a Die Roller Scene! Once you have passed all of the tests, you should proceed to Chapter 2: Creating a Die Roller Scene . ",
     "url": "/pages/01-CreatingADieRoller/01-ModelingADie.html#whats-next",
     "relUrl": "/pages/01-CreatingADieRoller/01-ModelingADie.html#whats-next"
-  },"30": {
+  },"31": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "Chapter 2: Creating a Die Roller Scene",
     "content": "In this part, we will be creating a Scene in Unity that allows us to roll different sided dice. Before starting, be sure you’ve completed Chapter 1: Modeling a Die and that all of your tests are passing. | 01. Create a Scene | 02. Setup Screen Dimensions | 03. Adding a Button to the Scene | 04. Adjusting the Canvas | 05. Positioning the Button | 06. Sizing the Button | 07. Creating a DieController | 08. Adding a DiceController to the Scene | 09. Rolling on Button Click | 10. Generalizing the DieController | Good Time to Commit | Challenge: Create a Set of Dice | What’s Next? | . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#chapter-2-creating-a-die-roller-scene",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#chapter-2-creating-a-die-roller-scene"
-  },"31": {
+  },"32": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "01. Create a Scene",
     "content": "A Scene in Unity is where you work with part of a game or application. In this section, we will create a Die Roller Scene that allows the user to click on buttons to roll dice with varying sides. | Open the Scenes folder. | Right click and select Create &gt; Scene | Rename the Scene to be Die Roller | Double click to open the Die Roller scene. | . | Verify that you have the Die Roller scene open. In the Hierarchy view, you should see Die Roller at the very top. | . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#01-create-a-scene",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#01-create-a-scene"
-  },"32": {
+  },"33": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "02. Setup Screen Dimensions",
     "content": "To make our lives a little easier, we will limit our game to use a standard monitor aspect size: 16:9. This is an aspect ratio and it means that for every 16 pixels wide, the screen is 9 pixels tall. This is a common screen resolution and includes HD (1920x1080) and 4K UHD (2840x2160). Note: By default, Unity selects a Free Aspect which means it will try to accommodate ANY screen size. As awesome as this might sound, it turns out to be a bit of a challenge to make it work in practice. | Click the Game Panel | Click the Aspect Drop Down (It probably says Free Aspect) | Select 16:9 Aspect | . | Finally, return back to the Scene panel. | . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#02-setup-screen-dimensions",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#02-setup-screen-dimensions"
-  },"33": {
+  },"34": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "03. Adding a Button to the Scene",
     "content": "Next, let’s add a Button to the scene. | Right click in the hierarchy | Select UI &gt; Button - TextMeshPro | . After a moment, you will likely see a massive button appear in the Scene along with several items in the Hierarchy: A Canvas, a Button, a Text, and an EventSystem. A Canvas is Unity’s main way for adding HUD / UI elements to the game screen. The EventSystem is the way Unity tracks user clicks / interactions with the Canvas. Finally, the Button is the actual button on the screen and the Text is the text that is displayed within the button. ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#03-adding-a-button-to-the-scene",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#03-adding-a-button-to-the-scene"
-  },"34": {
+  },"35": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "04. Adjusting the Canvas",
     "content": "So… how do we make the button look reasonable? . There are a few things happening here. By default, a Canvas is set up to render over an entire screen rather than onto the scene directly. This is important in 3D games as well as 2D games that go outside of the bounds of what the player sees. What would it mean to have the canvas be in the game world? . Instead, the Canvas renders on top of what the player sees. If you were to click to the Game panel, you would see the Button how it would appear to the user. If you’re lucky, you will see the button somewhere on the screen. However, this will be dependent on the size of the Game panel itself. If you drag the screen around, you will see the button position on the screen move about. | Open the Game Panel | Resize the window to see the button move | . What is happening? . The default behavior of the canvas is to maintain a constant pixel size. This means that, although the aspect is remaining constant, the size of the button and the text will always have the same size. If we select the Canvas in the Hierarcy, We can see this in the Inspector panel under the Canvas Scaler section. | Click the Canvas in the Hierarchy | Open the Inspector panel. | Find Canvas Scaler in the Inspector panel. | . How do we fix it? . For this scene, we would like the Canvas to scale to the size of the screen. | Set UI Scale Mode to be Scale With Screen Size | Set the resolution to be 1920 x 1080 (this is a 16:9 aspect) | . As you do this, you should see the Button adjust its position on the screen. However, if you resize the Game panel, the button scales to match the new resolution! . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#04-adjusting-the-canvas",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#04-adjusting-the-canvas"
-  },"35": {
+  },"36": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "05. Positioning the Button",
     "content": "If you return to the Scene panel, you will still see that the Canvas is massive compared to the scene. If you double click the Canvas in the Hierarchy, the Scene view will zoom out and center the Canvas within the panel. In fact, double clicking on any component in the Hierarchy will center it in the Scene panel. | Double click on the Canvas in the Hierarchy | Double click the Main Camera in the Hierarchy | . With our Canvas visible, let’s adjust the button to be at the bottom of the screen with a reasonable size. | Select the Button in the Hierarchy | Find the Rect Transform component in the Inspector panel. | Click the Anchors icon | Select Bottom and Center | . This updates how the Pos X and Pos Y properties are displayed. This makes them relative to the Bottom and Center position on the Canvas . | Next, update the Pos X and Pos Y to be 0 | . Because the anchors are set to the bottom and center of the screen, this centers the button at that point. This isn’t quite what we want. You’ll notice that the bottom half of the button is now off the screen. This is because the Pivot of the Button is set to be the center point of the Button. We can adjust it to be the bottom of the button by changing the Pivot’s Y to 0. | Set the Pivot to 0 | Update Pos Y to be 0 | . If all went well, your button is now at the bottom center of the screen. If you’d like to give it a little padding, you can set Pos Y to be slightly positive. ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#05-positioning-the-button",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#05-positioning-the-button"
-  },"36": {
-    "doc": "Chapter 2: Die Roller Scene",
-    "title": "06. Sizing the Button",
-    "content": "By default, Unity sets a button to be 160 pixels wide and 30 pixels tall. Because we have set our canvas to have a size of 1920x1080 the button appears quite small on the screen. Let’s update the size! . | Set the buttons width to be 300 | Set the buttons height to be 200 | . Because we have set the anchors and pivot to be the bottom center of the canvas, the button scales up and remains centered at the bottom of the screen. However, the text did not change size. This is because the Text is its own component in the scene that happens to be nested within the Button. | Select the Text from the Hierarchy | Find the TextMeshPro component in the Inspector . | You may have to scroll down to find it. | . | Change the Text from Button to Roll Die! | Change the Font Size to be 72. | . If all went well, the text on your button is now legible! . ",
-    "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#06-sizing-the-button",
-    "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#06-sizing-the-button"
   },"37": {
     "doc": "Chapter 2: Die Roller Scene",
+    "title": "06. Sizing the Button",
+    "content": "By default, Unity sets a button to be 160 pixels wide and 30 pixels tall. Because we have set our canvas to have a size of 1920x1080 the button appears quite small on the screen. Let’s update the size! . | Set the buttons width to something more reasonable (I used 300) | Set the buttons height to something more reasonable (I used 100) | . Because we have set the anchors and pivot to be the bottom center of the canvas, the button scales up and remains centered at the bottom of the screen. However, the text did not change size. This is because the Text is its own component in the scene that happens to be nested within the Button. | Select the Text from the Hierarchy | Find the TextMeshPro component in the Inspector . | You may have to scroll down to find it. | . | Change the Text from Button to Roll Die! | Change the Font Size to something more reasonable (I used 72). | . If all went well, the text on your button is now legible! . ",
+    "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#06-sizing-the-button",
+    "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#06-sizing-the-button"
+  },"38": {
+    "doc": "Chapter 2: Die Roller Scene",
     "title": "07. Creating a DieController",
-    "content": "Next, we want to make the button do something! To do this, we will create a MonoBehaviour called DieController. | Open the Scripts/Controller folder | Right click | Select Create &gt; C# Script | Name the script DieController | Double click to open the script | . We will use a DieController to… well… control a Die. More specifically a DieController defines how a Die interacts with a Scene. | Update your DieController script: | . using UnityEngine; namespace AdventureQuest.Dice { public class DieController : MonoBehaviour { private Die _die; } } . | Because the DieController is tightly coupled with the Die class, we will add it to the AdventureQuest.Dice name space. | To be able to attach a DieController to our Button, it must be a MonoBehaviour. | Additionally, because a DieController controls a Die we add a Die field. | . Notice: we have specified that the _die field is private. This means that the _die variable will only ever be accessed within this file preventing us (or our dev-team) from accidentally writing a bug that modifies / uses it in some way. Additionally, the naming convention for private fields in C# is to prefix with an underscore (_) and use camelCase. | Add a Start() method which initializes _die to be a 6 sided Die. | . public class DieController : MonoBehaviour { private Die _die; void Start() { _die = new Die(6); } } . The Start() method is a “magic” method that Unity looks for on MonoBehaviours. If one exists, it will be called WHEN the MonoBehaviour enters the scene (when it “starts”). This acts similar to a constructor for MonoBehaviours and gives us an opportunity to initialize it. In this case, we initialize the variable to be a new Die with 6 sides. | Add a Roll method which rolls Die and reports the result using Debug.Log | . public class DieController : MonoBehaviour { // omitted for brevity public void Roll() { _die = new Die(Sides); Debug.Log($\"Rolled a {_die.LastRolled}\"); } } . The above method calls the Die.Roll method which causes the state of the Die to change. Then, using Debug.Log displays the result of the roll in Unity’s console. All that is left to do is connect it to our button! . ",
+    "content": "Next, we want to make the button do something! To do this, we will create a MonoBehaviour called DieController. | Open the Scripts/Controller folder | Right click | Select Create &gt; C# Script | Name the script DieController | Double click to open the script | . We will use a DieController to… well… control a Die. More specifically a DieController defines how a Die interacts with a Scene. | Update your DieController script: | . using UnityEngine; namespace AdventureQuest.Dice { public class DieController : MonoBehaviour { private Die _die; } } . | Because the DieController is tightly coupled with the Die class, we will add it to the AdventureQuest.Dice name space. | To be able to attach a DieController to our Button, it must be a MonoBehaviour. | Additionally, because a DieController controls a Die we add a Die field. | . Notice: we have specified that the _die field is private. This means that the _die variable will only ever be accessed within this file preventing us (or our dev-team) from accidentally writing a bug that modifies / uses it in some way. Additionally, the naming convention for private fields in C# is to prefix with an underscore (_) and use camelCase. | Add a Start() method which initializes _die to be a 6 sided Die. | . public class DieController : MonoBehaviour { private Die _die; void Start() { _die = new Die(6); } } . The Start() method is a “magic” method that Unity looks for on MonoBehaviours. If one exists, it will be called WHEN the MonoBehaviour enters the scene (when it “starts”). This acts similar to a constructor for MonoBehaviours and gives us an opportunity to initialize it. In this case, we initialize the variable to be a new Die with 6 sides. | Add a Roll method which calls _die.Roll() and reports the result using Debug.Log | . public class DieController : MonoBehaviour { // omitted for brevity public void Roll() { _die.Roll(); Debug.Log($\"Rolled a {_die.LastRolled}\"); } } . The above method calls the Roll method of _die which causes the state of the Die to change. Then, using Debug.Log displays the result of the roll in Unity’s console. All that is left to do is connect it to our button! . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#07-creating-a-diecontroller",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#07-creating-a-diecontroller"
-  },"38": {
+  },"39": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "08. Adding a DiceController to the Scene",
     "content": "Let’s add a DieController to the scene. | Right click in the Hierarchy panel | Select Create Empty | Rename the Game Object d6 Controller | . | Select the d6 Controller in the Hierarchy | In the Inspector panel click Add Component | Search for DieController | Select DieController | . If all went well, a Die Controller component is now visible in the inspector. ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#08-adding-a-dicecontroller-to-the-scene",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#08-adding-a-dicecontroller-to-the-scene"
-  },"39": {
+  },"40": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "09. Rolling on Button Click",
     "content": "Next, we need to attach the Roll method to the Button’s OnClick event. | Select the Button in the Hierarchy | In the Inspector panel, find the Button component (you may need to scroll down) | . At the bottom of the Button component, you will see a box labeled OnClick(). This is a UnityEvent that GameObjects can “listen” to and be notified when the button is clicked. | Click the + icon on the On Click () event to add a listener | Drag the d6 Controller from the Hierarcy into the box that says None (Object). | . This registers the d6 Controller to listen for button clicks. All that is left to do is specify what it should do when the button is clicked. | Click the drop down menu that is labeled No Function | Select DieController &gt; Roll() | . By doing this, we have specified that we would like the Roll() method to be invoked anytime the button is clicked. ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#09-rolling-on-button-click",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#09-rolling-on-button-click"
-  },"40": {
+  },"41": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "Test it out",
     "content": "Whew! That was a lot of work! . | Click the Run button to launch the scene | Click the Roll Die! button | Open the Console panel | . If all went well, you should see the output of the Debug.Log in your console. ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#test-it-out",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#test-it-out"
-  },"41": {
+  },"42": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "10. Generalizing the DieController",
     "content": "Alright! We are now able to roll a 6 sided die. But we want to do be able to roll dice of all shapes and sizes! . To do this, we will add a int Sides property to our DieController that will specify how many sides the underlying die should be initialized with. Additionally, we will expose that property to the Inspector panel so we can set it in the editor. | Update the DieController class to have a Sides property that has a private set and initialized to 6. (Don’t forget to update your constructor) | . public class DieController : MonoBehaviour { public int Sides { get; private set; } = 6; private Die _die; void Start() { _die = new Die(Sides); // &lt;-- This line changed! } public void Roll() { // omitted for brevity } } . Because Sides should never change, we use private set to ensure that no one changes it later. Unfortunately, this means that the Inspector cannot see it. However, there is a work around! Unity provides a [field: SerializeField] attribute which allows us to modify a field in the Inspector without exposing it as public to the rest of the program. | Add the [field: SerializeField] attribute to the Sides property. | . public class DieController : MonoBehaviour { [field: SerializeField] public int Sides { get; private set; } = 6; // omitted for brevity } . Now, if we view the DieController in the inspector, we can adjust the number of sides the Die will initialize with. | Select the d6 Controller in the Hierarchy panel | In the Inspector find the Die Controller component | Update the Sides field to be 20 | . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#10-generalizing-the-diecontroller",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#10-generalizing-the-diecontroller"
-  },"42": {
+  },"43": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "Test it Out",
     "content": ". | Click the Run button to launch the scene | Click the Roll Die! button | Open the Console panel | . If all went well, you should now see a new set of numbers being rolled! . Note: You can set the Sides property to be invalid in the editor. However, because we added in an ArgumentException during construction, the console will report an error immediately when the game is launched. By failing fast, we are more likely to be able to identify this bug quickly . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#test-it-out-1",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#test-it-out-1"
-  },"43": {
+  },"44": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "Good Time to Commit",
     "content": "Now would be a good time to make a git commit. You just finished a feature. More specifically, you just implemented a simple DieController. Before committing, be sure you save your Die Roller scene (Unity doesn’t auto save for you). ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#good-time-to-commit",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#good-time-to-commit"
-  },"44": {
+  },"45": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "Challenge: Create a Set of Dice",
     "content": "Using everything you’ve done so far, can you create a set of Table Top Role Playing Game Dice? The set should include a d4, d6, d8, d10, d12, and d20. For organization purposes, you should create a parent GameObject for all of your dice buttons as well as all of your dice controllers. Read the Manual: Research the Horizontal Layout Group. Can you utilize it to position your buttons evenly along the bottom of the screen? . When you’re finished, your Hierarchy should match this one: . And your scene should look similar to this: . ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#challenge-create-a-set-of-dice",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#challenge-create-a-set-of-dice"
-  },"45": {
+  },"46": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "What’s Next?",
     "content": "Once you’ve added in several dice buttons, it’s time to get the information displaying on the screen. To do this, we will learn how to create our own UnityEvents. When you’re ready, proceed to Chapter 3: Adding an OnRoll Event. ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#whats-next",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#whats-next"
-  },"46": {
+  },"47": {
     "doc": "Chapter 2: Die Roller Scene",
     "title": "Chapter 2: Die Roller Scene",
     "content": " ",
     "url": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html",
     "relUrl": "/pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html"
-  },"47": {
+  },"48": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "Chapter 3: Adding an OnRoll Event",
     "content": "In this part, you will learn how to add UnityEvents to your scripts and update elements on the screen when a Die is rolled. Before starting, you should finish the challenge at the end of Chapter 2: Creating a Die Roller Scene and have a scene that contains 6 Die Controllers as well as 6 buttons that can roll each Die. | 00. Organize Your Hierarchy | 01. Adding a Text Component | Challenge: Center Title at the Top of the Screen | 02. Add a Result Label to a Die Button | 03. Adding an OnRoll listener to DieController | Challenge: Add Die Labels to All Buttons | Good Time to Commit | What’s Next? | . ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#chapter-3-adding-an-onroll-event",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#chapter-3-adding-an-onroll-event"
-  },"48": {
+  },"49": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "00. Organize Your Hierarchy",
     "content": "After completing the challenge for part 2, my Hierarchy looks like this: . It is okay if your Hierarchy structure is different. However, throughout this section, I refer to the Hierarchy as if it has the structure above. ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#00-organize-your-hierarchy",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#00-organize-your-hierarchy"
-  },"49": {
+  },"50": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "01. Adding a Text Component",
     "content": "We would like to have the result of the die being rolled to be displayed above the button that was clicked. To do this, we will add a text component to the screen. For practice, let’s start by adding a “title” to the scene that says “Die Roller!” . | Right click on the Canvas in your Hierarchy | Select UI &gt; Text - TextMeshPro | Rename the element to be called Title | . This is the same type of element as the text on the button’s you’ve added previously. ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#01-adding-a-text-component",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#01-adding-a-text-component"
-  },"50": {
+  },"51": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "Challenge: Center Title at the Top of the Screen",
     "content": ". | Update the TextMeshPro - Text component on Title . | Change the title to “Die Roller!” | Update the font to be a size you find reasonable | . | Update the Rect Transform component on Title . | Update the anchors and pivot to center it at the top of the screen | Update the width and height appropriately. | . | . When you’re finished, your scene should look similar to this: . ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#challenge-center-title-at-the-top-of-the-screen",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#challenge-center-title-at-the-top-of-the-screen"
-  },"51": {
+  },"52": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "02. Add a Result Label to a Die Button",
     "content": "Now that we have a little bit of practice with adding a text component to the UI. Let’s try adding a text component above the d4 button. | Right click on the d4 button in the Hierarchy | Select Create Empty Parent | Rename the new GameObject to be d4 Group | . By doing this, we have “pushed” the d4 button inside of a new GameObject called d4 Group. This may have caused the d4 button to adjust its positioning within the d4 Group as it is no longer being controlled by the Horizontal Layout Group of its previous parent (Dice). By default, when you create a parent object surrounding others, it will set its Rect Transform to encompass all of the inner object. However, the d4 within didn’t update its anchors / position appropriately. One fix would be to set the anchors / pivot of d4 to center in the parent. However, because we want to add a Text label within, we will instead add a Vertical Layout Group to d4 Group which will update the children appropriately. | Select d4 Group from the Hierarchy | In the Inspector select Add Component | Search for Vertical Layout Group | Add the component | . After doing this, the button should “snap” back into place within the d4 Group. If it doesn’t you may need to adjust the size of the d4 Group to have a width and height that are at least as big as the d4 button. Finally, let’s add a text component to the d4 Group . | Right click on the d4 Group | Select UI &gt; Text - TextMeshPro | Rename the component Label | . In my scene, the text is very small and is disappearing off the bottom of the scene. I would like the text to be a little bigger and centered above the button. | Move the Label above the d4 in the d4 Group | . This will change the order they are added to the Vertical Group . | Select the Label in the Hierarchy | Find the TextMeshPro component in the Inspector | Update the text to “1” | Update the font size to look “nice” (I’ve chosen 64) . | You may need to update the Height of the Rect Transform to match. | . | Update the Alignment to Center | . Lastly, let’s update the spacing and alignment of the Vertical Layout Group to make the children look a little nicer: . | Select d4 Group in the Hierarchy | Find the Vertical Layout Group in the Inspector | Adjust the spacing and alignment until you like the way it looks. | The image below shows the settings I chose: | . | . After making these changes, my d4 Group was too big to fit inside the Dice parent which caused it to go off the bottom of the scene again: . To fix this, you may need to update the height of the Dice parent to match the height of the d4 Group. Here is what the Scene looks like at this point: . ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#02-add-a-result-label-to-a-die-button",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#02-add-a-result-label-to-a-die-button"
-  },"52": {
+  },"53": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "03. Adding an OnRoll listener to DieController",
     "content": "Next, we would like to be able to update the text of the button any time the d4 Controller rolls. To do this, we are going to add a UnityEvent to the DieController class. To use UnityEvents we need to use the UnityEngine.Events name space. | Update the DieController.cs file to use the UnityEngine.Events name space. | . using UnityEngine; using UnityEngine.Events; // &lt;-- Required to use UnityEvents namespace AdventureQuest.Dice { public class DieController : MonoBehaviour { // omitted for brevity } } . | Update the DieController class to have a UnityEvent&lt;int&gt; property named OnRoll. | OnRoll should be public with a get and private set | . public class DieController : MonoBehaviour { public UnityEvent&lt;int&gt; OnRoll { get; private set; } [field: SerializeField] public int Sides { get; private set; } = 6; // omitted for brevity } . | To access it from the Inspector add a [field: SerializeField] attribute. | . [field: SerializeField] public UnityEvent&lt;string&gt; OnRollString { get; private set; } . A UnityEvent allows other elements of the game to “listen” for events to occur. When we specify UnityEvent&lt;string&gt; we are creating an event that will produce an string. In this case, that string will be the value that was rolled. Thus, any object listening will not only know that the die was rolled BUT also what the result was. To trigger the event, we need to add it to the Roll() method. | Update the Roll() method to call OnRoll.Invoke(_die.LastRolled.ToString()) | . public void Roll() { _die.Roll(); OnRollString.Invoke(_die.LastRolled.ToString()); } . This line of code converts the _die.LastRolled value to a string and then sends the resulting string to all of the “listeners” of the OnRollString event. If all went well, you should be able to find the OnRollString event in the Inspector. | Select d4 Controller from the Hierarchy | Find the DieController component | . Let’s add the d4 Group’s Label as a listener: . | Click the + icon on the OnRollString event. | Drag the Label into the None (Object) slot | . Lastly, we need to set the function to set the text to match the result. | Click the function drop down menu | Select TextMeshProUGUI &gt; text . | Be sure to select the text option that is listed toward the top under the Dynamic string section. | . | . When the OnRollString event is invoked, it will send the string to the Label which then uses that string to update its text property. ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#03-adding-an-onroll-listener-to-diecontroller",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#03-adding-an-onroll-listener-to-diecontroller"
-  },"53": {
+  },"54": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "Test it Out",
     "content": "If all went well, you should now be able to run your program, click the d4 button and see the text update. Give it a try! . ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#test-it-out",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#test-it-out"
-  },"54": {
+  },"55": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "Challenge: Add Die Labels to All Buttons",
     "content": "Can you update your scene such that each die button has a label that updates when it is clicked? . When you’re done, your scene should look and act similar to this: . ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#challenge-add-die-labels-to-all-buttons",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#challenge-add-die-labels-to-all-buttons"
-  },"55": {
+  },"56": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "Good Time to Commit",
     "content": "Now would be a good time to make a git commit. You just finished a feature. More specifically, you just added a OnRollString event to the DieController. Before committing, be sure you save your Die Roller scene (Unity doesn’t auto save for you). ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#good-time-to-commit",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#good-time-to-commit"
-  },"56": {
+  },"57": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "What’s Next?",
     "content": "If you’ve completed the challenge, you may have felt that “wiring” up all the labels, controllers, and buttons was incredibly tedious. If you decide to make changes to the buttons in the future, it will be painful to update all of them again. In the next section, we will learn how to create a Prefab for a Die Button to make it easy to add new buttons and more importantly update old buttons! . After you have completed the challenge, you should proceed to Chapter 4: Creating a Die Button Prefab . ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#whats-next",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html#whats-next"
-  },"57": {
+  },"58": {
     "doc": "Chapter 3: An OnRoll Event",
     "title": "Chapter 3: An OnRoll Event",
     "content": " ",
     "url": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html",
     "relUrl": "/pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.html"
-  },"58": {
+  },"59": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Chapter 4: Creating a Die Button Prefab",
     "content": "{: .no_toc } If you completed the challenge at the end of Chapter 3: Adding an OnRoll Event, you may have felt that “wiring” up all the labels, controllers, and buttons was incredibly tedious. If you decide to make changes to the buttons in the future, it will be painful to update all of them again. In this section, we will learn how to create a Prefab for a Die Button to manage the complexity of adding new buttons and updating existing buttons. Before starting this section, you should complete Chapter 3: Adding an OnRoll Event as well as the challenge at the end. When you’re ready, your scene should look and act similar to this: . | Chapter 4: Creating a Die Button Prefab | 01. Creating a Die Button Prefab | 02. Creating a DieButton Script | 03. Requiring a DieController | 04. Add Listeners to the Button and Die Controller | 05. Adding Prefabs to the Scene | 06. Adding a ButtonLabel property to a DieButton | Good Time to Commit | Challenge: Add an OnLabelChange Event to the Die Button Prefab | Challenge: Add the Remaining DieButton Prefabs to the Scene | What’s Next | . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#chapter-4-creating-a-die-button-prefab",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#chapter-4-creating-a-die-button-prefab"
-  },"59": {
+  },"60": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "01. Creating a Die Button Prefab",
     "content": "In programming, we consider copy/paste coding a “code-smell”. It is indicative that we should refactor our code to use a method, class, or loop to reuse existing code and manage the complexity. The same thing can be said about performing the same work over and over in the Unity editor / inspector. When this happens, it is usually a sign that we should find a way to manage the complexity. In this case, we will use a Prefab to manage the complexity of a Die Button. The word Prefab is short for Prefabrication. Essentially, it is a “blueprint” for a GameObject we would like to add to a Scene. If we update the Prefab it will update all of the GameObjects throughout the project that use it. ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#01-creating-a-die-button-prefab",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#01-creating-a-die-button-prefab"
-  },"60": {
+  },"61": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Create a Folder for Prefabs",
     "content": "As always, we want to manage the complexity of our project. Let’s start by creating a place to store our prefabs. | Navigate to the Assets folder | Right click | Select Create &gt; Folder | Rename the folder Prefabs | . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#create-a-folder-for-prefabs",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#create-a-folder-for-prefabs"
-  },"61": {
+  },"62": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Create a Prefab from an Existing GameObject",
     "content": "Our d4 Group will serve as the initial template for our Prefab. To turn an existing object into a Prefab you can drag it into a folder within the Project panel. | Open the Prefabs folder | Drag the d4 Group from the Hierarchy into the Prefabs folder | Rename it to Die Button | . If all went well, the d4 Group in the Hierarchy should be blue. This tells us that this GameObject is a Prefab. | Double click on the Die Button prefab in the Project panel to open it | . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#create-a-prefab-from-an-existing-gameobject",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#create-a-prefab-from-an-existing-gameobject"
-  },"62": {
+  },"63": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "02. Creating a DieButton Script",
     "content": "Our goal is to make the Die Button completely self contained. That is, all of the functionality should be encapsulated with a few control options in the Inspector that will allow it to be customized when added to a Scene. Currently, it is dependent on the d4 Controller within the Scene. To do this, we will create a new C# Script called DieButton which will have allow us to expose values to the Inspector. Because the DieButton will be part of the User Interface, we will create a new folder in our scripts directory for it. | Navigate to the Scripts folder | Create a new folder UI | Within the UI folder | Create a new C# Script called DieButton | Double click to open the DieButton script | . | The DieButton acts as a UI element in our project so we will add it to the AdventureQuest.UI name space. | . | Update your DieButton class to be in the AdventureQuest.UI name space. | We won’t need the Update method so remove it from the generated template | . Note: We will use the Start method to initialize the Prefab so you can leave it . using UnityEngine; namespace AdventureQuest.UI { public class DieButton : MonoBehaviour { void Start() { } } } . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#02-creating-a-diebutton-script",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#02-creating-a-diebutton-script"
-  },"63": {
+  },"64": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "03. Requiring a DieController",
     "content": "A DieButton must be connected to a DieController. To enforce this, we can use the RequireComponent attribute. | Update the DieButton.cs file to use the AdventureQuest.Dice name space . | This allows access to the DieController class | . | Add the [RequireComponent(typeof(DieController))] attribute to the DieButton class | . using UnityEngine; using AdventureQuest.Dice; // &lt;-- Required to use DieController namespace AdventureQuest.UI { [RequireComponent(typeof(DieController))] // &lt;-- Enforces that a DieController is available public class DieButton : MonoBehaviour { // omitted for brevity } } . Next, add the DieButton script to the DieButton Prefab. | Select Die Button in the Hierarchy . | Be sure you are editing the Prefab | . | In the Inspector select Add Component | Search for DieButton | Add the Component | . Notice: By adding the DieButton script, it automagically added the DieController script as well! This is because the DieButton script enforces that the GameObject it is attached to must have a DieController. ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#03-requiring-a-diecontroller",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#03-requiring-a-diecontroller"
-  },"64": {
+  },"65": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "04. Add Listeners to the Button and Die Controller",
     "content": "Now that we have a Die Controller, we can register it on the Die Button’s Button listener. | First, rename the d4 element to be Button | . Our Die Button Prefab won’t always have a d4 so it doesn’t make sense to have a child component called d4. Next, register the DieController’s Roll() method on the Button’s OnClick event. | Select Button from the Hierarchy | In the Inspector find the Button component | Find the On Click listener | Drag the Die Button into the None (Object) space | . | Select the function drop down on the Die Button listener | Select DieController &gt; Roll() | . Finally, we must register the Label on the DieController’s OnRollString event. | Select Die Button in the Hierarchy | In the Inspector find the DieController component | Add a listener to the OnRollString by clicking the + button | Drag Label from the Hierarchy onto the Object (None) field | . | Select the function drop down on the listener | Select TextMeshPro &gt; text | . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#04-add-listeners-to-the-button-and-die-controller",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#04-add-listeners-to-the-button-and-die-controller"
-  },"65": {
+  },"66": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Test the Die Button in the Die Roller Scene",
     "content": "Before continuing, test that the DieButton Prefab is working as expected. | Return to the Scene by clicking the &lt; button near the top of the Hierarchy` panel. | . Notice: The d4 Group GameObject in the Hierarchy has “automagically” been updated to reflect the changes made in the Die Button Prefab . | Select d4 Group in the Hierarchy | Find the Die Controller component in the Inspector | Set Sides to 4 | . Notice: After modifying a Prefab a small blue line appears on the left of the Inspector next to the field. This indicates that this value has been modified on this Prefab and won’t be changed if the Prefab is modified. | Run the scene and verify that the d4 button updates properly. | . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#test-the-die-button-in-the-die-roller-scene",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#test-the-die-button-in-the-die-roller-scene"
-  },"66": {
+  },"67": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "05. Adding Prefabs to the Scene",
     "content": "Next, let’s replace each of the button groups with an instance of our Die Button prefab. | Delete each of the non-prefab button groups from the scene. | . | Drag the Die Button Prefab from the Project panel into the Dice group in the Hierarchy | Rename the object to d6 Button | . Notice, the label of the button still says d4. We could edit the label in the Scene for each of our buttons. This would require us to be change a child component of the Prefab. Typically, we want all of the options of a prefab to be accessible from the Prefabs root object. ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#05-adding-prefabs-to-the-scene",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#05-adding-prefabs-to-the-scene"
-  },"67": {
+  },"68": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "06. Adding a ButtonLabel property to a DieButton",
     "content": ". | Update the DieButton class to have a string property named ButtonLabel . | The property should be public, provide a get, and have a private set. | Initialize the property to be string.Empty | . | Add the [field: SerializeField] attribute to the property to expose it to the Inspector | . public class DieButton : MonoBehaviour { [field: SerializeField] public string ButtonLabel { get; private set; } = string.Empty; void Start() { } } . When the DieButton starts, we will check to see if the ButtonLabel has been set in the Inspector. If it has not been set. We will initialize it to be d{Sides} using the DieControllers value. This gives the user flexibility to set the ButtonLabel OR use a default value. Because we have enforced that a DieButton requires a DieController using the RequireComponent attribute. We can use the GetComponent&lt;DieController&gt;() method to access the DieController. | Update the Start() method to check if ButtonLabel == string.Empty | If it is string.Empty set ButtonLabel to be $”d{sides}”. | Use GetComponent&lt;DieController&gt;().Sides to get the number of sides. | . | . void Start() { if (ButtonLabel == string.Empty) { DieController dieController = GetComponent&lt;DieController&gt;(); int sides = dieController.Sides; ButtonLabel = $\"d{sides}\"; } } . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#06-adding-a-buttonlabel-property-to-a-diebutton",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#06-adding-a-buttonlabel-property-to-a-diebutton"
-  },"68": {
+  },"69": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Test it in the Scene",
     "content": "Before continuing, verify that the ButtonLabel field is visible in the Inspector and that when you run the Scene the field is updated to match the expected value. Note: The label on the button will not update just yet. ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#test-it-in-the-scene",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#test-it-in-the-scene"
-  },"69": {
+  },"70": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Good Time to Commit",
     "content": "Now would be a good time to make a git commit. Since you have not yet finished a feature, this would be a work-in-progress commit . More specifically, you just added a Die Button Prefab. Before committing, be sure you save your Die Roller scene (Unity doesn’t auto save for you). ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#good-time-to-commit",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#good-time-to-commit"
-  },"70": {
+  },"71": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Challenge: Add an OnLabelChange Event to the Die Button Prefab",
     "content": "Alright! You’re almost there. All that is left is to update the Button’s text when the DieButton starts: To do this, you will: . | Add a UnityEvent&lt;string&gt; OnLabelChange property . | Follow good practices with a private set | Expose it to the Inspector using the [field: SerializeField] attribute | You will need to use the UnityEngine.Events name space to access the UnityEvent class. | . | Update the Start() method to call OnLabelChange.Invoke(ButtonLabel) . | This should happen after the label has been initialized | This should always happen exactly once (even if the label wasn’t set) | . | Update the Button’s Text component to default to d?? | Register the Button’s Text component to listen to the OnLabelChange event . | When it occurs, the TextMeshPro’s text property should update | . | . Hint: In Chapter 3, we added an OnRollString event to the DieController. You should be able to apply the same steps here. When you’ve finished the DieButton component should look like this: . Additionally, when you run the Die Roller Scene, the button labels should “automagically” update. ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#challenge-add-an-onlabelchange-event-to-the-die-button-prefab",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#challenge-add-an-onlabelchange-event-to-the-die-button-prefab"
-  },"71": {
+  },"72": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Challenge: Add the Remaining DieButton Prefabs to the Scene",
     "content": "Now that you have a nice Die Button Prefab, you can delete all of the DieControllers from the Die Roller Scene and add Die Button Prefabs in their place. | Delete the Dice group containing your previous DieControllers | Add Die Button Prefabs for the remaining dice. | . When you’re finished, your scene should look and act like this: . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#challenge-add-the-remaining-diebutton-prefabs-to-the-scene",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#challenge-add-the-remaining-diebutton-prefabs-to-the-scene"
-  },"72": {
+  },"73": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "What’s Next",
     "content": "Congratulations! You’ve completed Part 1: Creating a Die Roller! . In Part 2 you will create a DicePool class that allows for complex combinations of dice to be rolled together. For example, a weapon might deal damage equal to the result of rolling 2 six-sided dice and 3 four-sided dice. In table top RPG lingo this would be 2d6 + 3d4. Additionally, in Part 2 you will create a Roll Analysis tool to explore the probability of the outcomes that rolling a DicePool could produce. For example with 2d6 + 3d4 we know the minimum is 5 (5 dice total) and the maximum is 24 (26 + 34) but what are the odds of rolling a 12? . When you’re ready, continue to Part 5: Modeling a Dice Group . ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#whats-next",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html#whats-next"
-  },"73": {
+  },"74": {
     "doc": "Chapter 4: Die Button Prefab",
     "title": "Chapter 4: Die Button Prefab",
     "content": " ",
     "url": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html",
     "relUrl": "/pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.html"
-  },"74": {
+  },"75": {
     "doc": "Chapter 5: Dice Group",
     "title": "Chapter 5: Dice Group",
     "content": ". | What’s Next | . ",
     "url": "/pages/02-DiceAnalyzer/05-DiceGroup.html",
     "relUrl": "/pages/02-DiceAnalyzer/05-DiceGroup.html"
-  },"75": {
+  },"76": {
     "doc": "Chapter 5: Dice Group",
     "title": "What’s Next",
     "content": " ",
     "url": "/pages/02-DiceAnalyzer/05-DiceGroup.html#whats-next",
     "relUrl": "/pages/02-DiceAnalyzer/05-DiceGroup.html#whats-next"
-  },"76": {
+  },"77": {
     "doc": "Home",
     "title": "Captain Coder’s Adventure Quest",
     "content": "Welcome to Captain Coder’s Adventure Quest! This site will help guide you through learning how to create a Point and Click adventure game in Unity that is inspired by classic Table Top Role Playing Games such as Dungeons &amp; Dragons, Swords &amp; Sorcery, and Fate Core! . ",
     "url": "/#captain-coders-adventure-quest",
     "relUrl": "/#captain-coders-adventure-quest"
-  },"77": {
+  },"78": {
     "doc": "Home",
     "title": "Learning Goals",
     "content": "This project is focused heavily on teaching you how to manage the complexity of large(ish) programs written with C# and Unity. More specifically, this project focuses on: . | Object Oriented Design Principles in C# | Unit Testing with Unity Test Framework | Unity’s User Interface Framework | Using UnityEvents to manage program complexity | . ",
     "url": "/#learning-goals",
     "relUrl": "/#learning-goals"
-  },"78": {
+  },"79": {
     "doc": "Home",
     "title": "Who is this project for?",
     "content": "This project was designed to be used by anyone who has the basics of programming in C# under there belt. Before starting, you should be relatively comfortable with: . | Variables | Boolean Logic | If Statements | Loops | Methods | . Note about Object Oriented Programming . Although it isn’t necessary to be familiar with classes and object oriented programming, it isn’t an absolute requirement. Throughout this project you will be exposed to Object Oriented (OO) design principles and asked to use good practices. My hope is that, if you’re not familiar designing your own classes and objects, you will learn about them by practicing them. ",
     "url": "/#who-is-this-project-for",
     "relUrl": "/#who-is-this-project-for"
-  },"79": {
+  },"80": {
     "doc": "Home",
     "title": "What if I’m not ready?",
     "content": "Unity is a very powerful framework for creating cross platform applications and games. In my opinion, attempting to learn to program WHILE learning how to use Unity is incredibly challenging and often results in learning bad habits. I highly recommend learning the basics listed above before attempting to use Unity. If you’re new to programming, Captain Coder’s Adventures in C# is an interactive online workbook that provides lessons, activities, and projects that will help you learn the basics. If you prefer a physical text book, I highly recommend The C# Player’s Guide. It is my personal favorite C# book for absolute beginners. Another good option is The Yellow Book. This book has the advantage of having a FREE digital copy. ",
     "url": "/#what-if-im-not-ready",
     "relUrl": "/#what-if-im-not-ready"
-  },"80": {
+  },"81": {
     "doc": "Home",
     "title": "Home",
     "content": " ",
