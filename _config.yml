@@ -1,7 +1,6 @@
 title: Captain Coder's Adventure Quest
 description: A Unity Project
-# theme: just-the-docs
-remote-theme: jcollard/just-the-docs
+theme: just-the-docs
 
 url: https://just-the-docs.github.io
 
