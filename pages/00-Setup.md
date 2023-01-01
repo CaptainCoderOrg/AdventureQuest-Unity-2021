@@ -3,7 +3,7 @@ layout: default
 title: "Chapter 0: Setup"
 nav_order: 1
 ---
-# Part 0 - Setup
+# Chapter 0: Setup
 
 In this section, you will import the base `Adventure Quest` project into Unity.
 Before starting, you should ensure you have `Unity 2021.3.XX`. Although this
@@ -23,21 +23,21 @@ You can access the project template on GitHub here: [LINK](https://github.com/Ca
 
 1. If you have a GitHub account, select `Use this Template` > `Create a new Repository`
 
-![Use this Template](../imgs/00%20-%20Setup/00-UseTemplate.png)
+![Use this Template](imgs/00%20-%20Setup/00-UseTemplate.png)
 
 2. Give your repository a name. I recommend calling it `AdventureQuest`.
 3. Click `Create repository from template`
 
-![Create Repository](../imgs/00%20-%20Setup/02-CreateRepo.png)
+![Create Repository](imgs/00%20-%20Setup/02-CreateRepo.png)
 
 After a few second your copy of the template should be available. Next, you will
 clone the repository. I've provided instructions below for using `GitHub
 Desktop`. If you have a preferred way of cloning the repository, you can skip to
 [02. Adding Project to Unity Hub](#02-adding-project-to-unity-hub)
 
-4.  Click `Code` > `Open with GitHub Desktop`
+1.  Click `Code` > `Open with GitHub Desktop`
 
-![Open with GitHub Desktop](../imgs/00%20-%20Setup/03-OpenWithGHD.png)
+![Open with GitHub Desktop](imgs//00%20-%20Setup/03-OpenWithGHD.png)
 
 This should launch GitHub Desktop.
 
@@ -46,7 +46,7 @@ This should launch GitHub Desktop.
 
 6. Click `Clone`
 
-![Click Clone](../imgs/00%20-%20Setup/04-ClickClone.png)
+![Click Clone](imgs//00%20-%20Setup/04-ClickClone.png)
 
 After a few moments, the template will be cloned to your computer. You are now
 ready for [02. Adding Project to Unity Hub](#02-adding-project-to-unity-hub)
@@ -59,7 +59,7 @@ repository and you will not be able to make incremental commits.
 If you do not have a GitHub account, you can download the template as a ZIP by
 clicking `Code` > `Download ZIP`:
 
-![Download Zip](../imgs/00%20-%20Setup/01-DownloadZip.png)
+![Download Zip](imgs//00%20-%20Setup/01-DownloadZip.png)
 
 
 # 02. Adding Project to Unity Hub
@@ -75,16 +75,16 @@ compatibility.
 3. Click the arrow next to the `Open` button.
 4. Click `Add project from disk`
 
-![Add Project from Disk](../imgs/00%20-%20Setup/05-AddProject.png)
+![Add Project from Disk](imgs//00%20-%20Setup/05-AddProject.png)
 
 5. Navigate to your repository and select the folder within called "Adventure
    Quest". This folder should contain a folder called `Assets`.
 
-![Select Folder](../imgs/00%20-%20Setup/SelectFolder.gif)
+![Select Folder](imgs//00%20-%20Setup/SelectFolder.gif)
 
 6. The `Adventure Quest` project should now appear in Unity Hub. Double Click to open it.
 
-![Open Project](../imgs/00%20-%20Setup/07-OpenProject.png)
+![Open Project](imgs//00%20-%20Setup/07-OpenProject.png)
 
 The first time the project is opened, it will take several minutes to load. 
 
