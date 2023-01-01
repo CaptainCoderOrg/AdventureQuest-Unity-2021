@@ -21,7 +21,7 @@ project may work with other versions, it has not been tested.
 
 # 01. Get the Project Template
 
-You can access the project template on GitHub here: [LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/discussions/2)
+You can access the project template on GitHub here: [LINK](https://github.com/CaptainCoderOrg/AdventureQuest-Unity-2021/)
 
 ## Option 1 - Using GitHub (Recommended)
 
