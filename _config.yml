@@ -14,3 +14,6 @@ callouts:
   note:
     title: note
     color: yellow
+  tip:
+    title: tip
+    color: blue
