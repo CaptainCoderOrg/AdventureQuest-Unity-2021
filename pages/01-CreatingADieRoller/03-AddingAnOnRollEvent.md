@@ -165,13 +165,13 @@ namespace AdventureQuest.Dice
 }
 ```
 
-2. Update the `DieController` class to have a `UnityEvent<int>` property named `OnRoll`.
-3. `OnRoll` should be `public` with a `get` and `private set`
+2. Update the `DieController` class to have a `UnityEvent<string>` property named `OnRollString`.
+3. `OnRollString` should be `public` with a `get` and `private set`
 
 ```csharp
 public class DieController : MonoBehaviour
 {
-    public UnityEvent<int> OnRoll { get; private set; }
+    public UnityEvent<string> OnRollString { get; private set; }
     [field: SerializeField]
     public int Sides { get; private set; } = 6;
     // omitted for brevity
