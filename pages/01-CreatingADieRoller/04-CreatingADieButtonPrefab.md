@@ -6,7 +6,9 @@ parent: "Part 1: Creating a Die Roller"
 ---
 
 # Chapter 4: Creating a Die Button Prefab
-{: .no_toc } If you completed the challenge at the end of [Chapter 3: Adding an
+{: .no_toc } 
+
+If you completed the challenge at the end of [Chapter 3: Adding an
 OnRoll Event], you may have felt that "wiring" up all the labels, controllers,
 and buttons was incredibly tedious. If you decide to make changes to the buttons
 in the future, it will be painful to update all of them again. In this section,
