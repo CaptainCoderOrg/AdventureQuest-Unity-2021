@@ -48,7 +48,7 @@ or `System.Collections.Generic` name spaces.
 
 # 02. Properties of a DicePool
 
-Just as we did with the `DiceGroup`, start by thinking about the properties that
+Just as you did with the `DiceGroup`, start by thinking about the properties that
 will define a `DicePool`. 
 
 Think about the following questions, then expand the section below.
@@ -110,7 +110,7 @@ Additionally, I have chosen to create a `private readonly DiceGroup[]` **field**
 
 # 03. DicePool Constructor
 
-Just as with the `DiceGroup`, we can derive each of the **properties** of
+Just as with the `DiceGroup`, you can derive each of the **properties** of
 `DicePool` using the `_dice` **field**. However, to make it easier to test,
 let's start by implementing a **constructor**.
 
