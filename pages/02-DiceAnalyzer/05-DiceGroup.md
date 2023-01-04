@@ -32,9 +32,9 @@ like-sided dice.
 # 00. Create a Feature Branch
 
 You're about to start a new feature! Before beginning, you should create a
-feature branch named `{username}/dice-group`.
+feature branch named `{username}/dice-analyzer`.
 
-{% include GitHub/NewBranch.md branch_name="username/dice-group" %}
+{% include GitHub/NewBranch.md branch_name="username/dice-analyzer" %}
 
 
 # 01. The DiceGroup Class
