@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Chapter 6: Dice Pool"
-nav_order: 6
+title: "Ch ??: Dice Pool"
+nav_order: 99
 parent: "Part 2: Dice Analyzer"
 ---
 
-# Chapter 6: Dice Pool
+# Chapter ??: Dice Pool
 {: .no_toc }
 
 In [Chapter 5], you implemented a `DiceGroup` which allows you to simulate
@@ -566,7 +566,7 @@ toward analyzing the possible outcomes of various dice pools.
 
 ---
 [Chapter 5]: {% link pages/02-DiceAnalyzer/05-DiceGroup.md %}
-[Chapter 5: DicePool Roller]: {% link pages/02-DiceAnalyzer/07-DicePoolRoller.md %}
+[Chapter 5: DicePool Roller]:
 [Fail Fast]: https://en.wikipedia.org/wiki/Fail-fast
 [string.Join]: https://learn.microsoft.com/en-us/dotnet/api/system.string.join?view=net-7.0#system-string-join(system-string-system-string())
 [Expression body definition]: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#expression-body-definitions

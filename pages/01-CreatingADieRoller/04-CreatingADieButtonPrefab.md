@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Chapter 4: Die Button Prefab"
+title: "Ch 4: Die Button Prefab"
 nav_order: 4
 parent: "Part 1: Creating a Die Roller"
 ---

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Chapter 5: Dice Group"
+title: "Ch 5: Dice Group"
 nav_order: 5
 parent: "Part 2: Dice Analyzer"
 ---
@@ -431,12 +431,11 @@ of like-sided dice.
 # What's Next
 
 With a `DiceGroup` in place, we can simulate rolling a group of like-sided dice.
-However, what if we would like to roll multiple `DiceGroup`s together? For
-example, what if **The Sword of Fire and Ice** deals `2d4 + 2d6` damage? In the
-[Chapter 6: Dice Pool], you will define a **class** `DicePool` which models a 
-collection of `DiceGroup`s that are rolled together.
+In [Chapter 6: Dice Analyzer Scene], you will create a scene that allows the
+player to provide a dice group formula in Dice Notation (`3d6` or `2d4`) and
+roll the `DiceGroup` while reporting information about the rolls.
 
 ---
 [Expression body definition]: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#expression-body-definitions
 
-[Chapter 6: Dice Pool]: {% link pages/02-DiceAnalyzer/06-DicePool.md %}
+[Chapter 6: Dice Analyzer Scene]: {% link pages/02-DiceAnalyzer/06-DiceAnalyzerScene.md %}

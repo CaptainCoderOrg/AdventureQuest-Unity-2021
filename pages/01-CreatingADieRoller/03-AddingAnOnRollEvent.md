@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Chapter 3: An OnRoll Event"
+title: "Ch 3: An OnRoll Event"
 nav_order: 3
 parent: "Part 1: Creating a Die Roller"
 ---

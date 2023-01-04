@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Chapter 1: Modeling a Die"
+title: "Ch 1: Modeling a Die"
 nav_order: 1
 parent: "Part 1: Creating a Die Roller"
 ---

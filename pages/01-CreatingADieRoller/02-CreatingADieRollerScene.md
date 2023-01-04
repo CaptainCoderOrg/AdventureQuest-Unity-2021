@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Chapter 2: Die Roller Scene"
+title: "Ch 2: Die Roller Scene"
 nav_order: 2
 parent: "Part 1: Creating a Die Roller"
 ---
