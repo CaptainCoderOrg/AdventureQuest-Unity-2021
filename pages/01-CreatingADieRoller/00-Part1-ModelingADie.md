@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Part 1: Creating a Die Roller"
-nav_order: 2
+nav_order: 1
 has_children: true
 ---
 

@@ -2,7 +2,6 @@
 layout: page
 title: "Ch ??: Dice Pool"
 nav_order: 99
-parent: "Part 2: Dice Analyzer"
 ---
 
 # Chapter ??: Dice Pool

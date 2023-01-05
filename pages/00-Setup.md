@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Chapter 0: Setup"
-nav_order: 1
+nav_order: 0
 ---
 # Chapter 0: Setup
 {: .no_toc }

@@ -1,9 +1,577 @@
 ---
 layout: page
 title: "Ch 6: Dice Analyzer Scene"
-nav_order: 5
+nav_order: 6
 parent: "Part 2: Dice Analyzer"
 ---
 
 
 # Chapter 6: Dice Analyzer Scene
+{: .no_toc }
+
+In [Chapter 5], you created a `DiceGroup` which simulates rolling groups of like
+sided dice (e.g. `3d6` or `2d4` or `1d20`). In this chapter, you will create a
+simple scene that allows the player to specify a `DiceGroup` using [Dice
+Notation] and roll that `DiceGroup` while collecting and reporting statistics
+about the roll to the screen.
+
+TODO: Add demo scene here
+
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+# 01. Create a Dice Analyzer Scene
+
+1. Create a new `Scene` in your `Scenes` folder and call it `Dice Analyzer`
+2. Open the new `Scene`
+
+If you need a refresher on creating and opening a Scene, check out [Chapter 2.01: Create a Scene]
+{: .tip }
+
+# 02. Add and Configure a Canvas
+
+Before adding `UI` components to the `Scene`, it is a good idea to add and
+configure a `Canvas` to scale properly with the screen.
+
+{% include UI/AddCanvas.md %}
+{% include UI/ScaleCanvas1920x1080.md %}
+
+# Challenge: Add UI Components
+
+In this `Scene`, you will add 4 **UI components**:
+
+1. **Title**: A `Text` element for the Title
+2. **Dice Group Input**: An `Input Field` to allow the user to specify the `DiceGroup` to roll
+3. **Dice Info**: A `Text` element to display information about the rolls made by the `DiceGroup`
+4. **Roll Button** A `Button` to simulate rolling the current `DiceGroup`
+
+Add, rename, and size these 4 components into your `Hierarchy`. When you're
+finished your `Canvas` should contain *at least* 4 **Game Objects**. However,
+you may find it helpful to add additional **Game Objects** with **Layout
+components** to position your elements the way you would like.
+
+Here is what my `Hierarchy` and `Scene` looked like after I had finished:
+
+![Canvas Finished Hierarchy](../imgs/06-DiceAnalyzerScene/00-CanvasFinishedHierarchy.png)
+
+![Game View Canvas Finished](../imgs/06-DiceAnalyzerScene/01-GameViewCanvasFinished.png)
+
+If you need help adding a specific component to your `Scene`, click on
+a section below to see instructions.
+
+{% include UI/AddText.md %}
+{% include UI/AddButton.md %}
+{% include UI/AddInputField.md %}
+
+# 03. Create a DiceGroupController Script
+
+Next, you will create a `MonoBehaviour` called `DiceGroupController`. This
+script will allow us to create a `GameObject` that controls a `DiceGroup` as
+well as provide `UnityEvent`s that other `GameObjects` can listen to and update
+themselves accordingly.
+
+1. In your `Scripts/Controller` folder create a script called `DiceGroupController`
+2. Open the `DiceGroupController` script
+3. It should be apart of the `AdventureQuest.Dice` name space
+4. You won't need an `Update()` or `Start()` **method**
+5. The script will use the `UnityEngine` and `UnityEngine.Events` name spaces
+
+If you've set up the **class** properly, your `DiceGroupController.cs` file
+should look like this:
+
+```csharp
+using UnityEngine;
+using UnityEngine.Events;
+
+namespace AdventureQuest.Dice
+{
+    public class DiceGroupController : MonoBehaviour
+    {
+
+    }
+}
+```
+
+# 04. Properties and Methods of a DiceGroupController
+
+Think about what purpose a `DiceGroupController` will serve in this `Scene`.
+
+* Based on the UI components, what **methods** will the `DiceGroupController` need?
+* What parameters will those **methods** accepts?
+* How will those parameters be validated?
+* What events does a `DiceGroupController` need to communicate with the UI components?
+* What **properties** and **private fields** will the `DiceGroupController` have
+  to manage the state of a `DiceGroup`?
+
+Think about the questions above, then expand the section below.
+
+<details markdown="block">
+<summary>
+<h3 style="display:inline">DiceGroup Properties and Methods (Click to Expand)</h3>
+</summary>
+
+Just as with the `DiceGroup`, there are many ways to implement a `DiceController`. 
+If you chose a different set of **properties**, I'd love to hear about them.
+
+I won't try to claim that the **properties** I've chosen here are the best
+possible set of **properties**. But, I have attempted to choose properties that
+**expose** only the necessary pieces for controlling a `DiceGroup`.
+
+My proposed **class** has 
+* 1 **private field** to track the `DiceGroup`, 
+* 3 `UnityEvent` **properties**: `OnDiceGroupInitialized`, `OnRoll`, and `OnError`
+* 2 **methods**: `Roll()` and `InitializeDiceGroup(string diceNotation)`
+
+```csharp
+/// <summary>
+/// The <see cref="DiceGroup"/> that is being controlled (or null if no _diceGroup has
+/// been initialized).
+/// </summary>
+private DiceGroup _diceGroup;
+
+/// <summary>
+/// This event is invoked each time a new <see cref="DiceGroup"/> is 
+/// initialized.
+/// </summary>
+[field: SerializeField]
+public UnityEvent OnDiceGroupInitialized { get; private set; }
+
+/// <summary>
+/// This event is invoked each time a Roll event occurs with the 
+/// value of that roll.
+/// </summary>
+[field: SerializeField]
+public UnityEvent<string> OnRoll { get; private set; }
+
+/// <summary>
+/// This event is invoked if an error occurs reporting a message to be
+/// reported to the user.
+/// </summary>
+[field: SerializeField]
+public UnityEvent<string> OnError { get; private set; }
+
+/// <summary>
+/// Attempts to initialize a <see cref="DiceGroup"/> using the specified
+/// <paramref name="diceNotation"/>. If the <paramref name="diceNotation"/> was
+/// not a valid <see cref="DiceGroup"/> an error is generated and no dice is initializd.
+/// </summary>
+public void InitializeDiceGroup(string diceNotation)
+{
+    // TODO
+}
+
+/// <summary>
+/// Rolls the <see cref="DiceGroup"/>. If no <see cref="DiceGroup"/> has been initialized,
+/// an error is generated and no dice are rolled.
+/// </summary>
+public void Roll()
+{
+    // TODO
+}
+```
+
+As always, my main focus is on managing the complexity of the program. To do
+this, I often focus on reducing **mutability**. 
+
+In this case, I've made the `DiceGroup _diceGroup` a **private field** that is
+not **exposed**. This means that no other objects **cannot** interact with it directly.
+Instead, if they would like to roll the `DiceGroup`, they must do so by
+calling the `DiceGroupController`'s `Roll()` **method**. This ensures that we can
+invoke the `OnRoll` event each time the `DiceGroup` is rolled.
+
+Similarly, the `DiceGroup` can only be changed by calling the
+`InitializeDiceGroup` **method** which allows us to validate and report errors
+if the specified string is not in the correct format.
+
+One could make an argument that the `DiceGroup` should be exposed as a
+**property** using a `get` and `set` value and the conversion from a
+`diceNotation` string should happen in a separate **class**. I believe this
+would be a completely reasonable alternative to what I have proposed here. It
+should be noted that this would require an additional `OnError` listener in that
+**class** specifically for initialization which isn't necessarily a negative. 
+{: .note }
+
+</details>
+
+## Add a DiceGroupController GameObject to the Scene
+
+With the `DiceGroupController` script outlined, you're ready to attach it to a
+`GameObject` in the `Scene`.
+
+1. Right click in the `Hierarchy`
+2. Select `Create Empty`
+3. Rename the new object `DiceGroupController`
+4. Select the `DiceGroupController` object in the `Hierarchy`
+5. In the `Inspector` click `Add Component`
+6. Search for `DiceGroupController` and add it.
+
+# 05. On Edit End Event
+
+With the `DiceController` **events** in place, it is time to connect it to
+the UI components.
+
+The `Input Field` has several **events**. In our case, we would like to
+**invoke** the `DiceGroupController`'s `InitializeDiceGroup` **method** when the
+user is finished entering a value into the `Dice Group Input`.
+
+1. Select `Dice Group Input` in the `Hierarchy`
+2. In the `Inspector` find the `TextMeshPro - Input Field` component
+3. Within this component, locate the `On End Edit (String)` **event**
+   * You will likely need to scroll to access it 
+
+![Locate OnEnd Edit](../imgs/06-DiceAnalyzerScene/02-LocateOnEndEdit.png)
+
+1. Click the `+` icon to add a **listener** to the **event**
+2. Drag `Dice Group Input` into the **listener**
+3. Select the `DiceGroupController.InitializeDiceGroup` **method** from the
+   `Function` dropdown.
+
+This event triggers after the user enters a value and clicks out of the `Input Field`.
+
+To test that it is connected, you can update your `DiceGroupController.InitializeDiceGroupMethod`:
+
+```csharp
+public void InitializeDiceGroup(string diceNotation)
+{
+    Debug.Log($"The user entered: '{diceNotation}'");
+}
+```
+
+Run the `Scene`, enter a value, and click away from the input box. You should
+see the string you entered displayed in the **console**.
+
+![Input Change](../imgs/06-DiceAnalyzerScene/03-InputChange.gif)
+
+# Challenge: Connect Dice Info to the OnError event
+
+When the user enters a string that cannot be formatted, you will need to display
+an error message. To do this, you can connect the `Dice Info` component to the
+`DiceGroupController`'s `OnError` **event**.
+
+To test that it is properly connected, update the `InitializeDiceGroup` method to **invoke**
+the `OnError` event:
+
+```csharp
+public void InitializeDiceGroup(string diceNotation)
+{
+    OnError.Invoke($"The user entered: '{diceNotation}'");
+}
+```
+
+If all went well, your scene should act similar to the one below:
+
+![Input Change 2](../imgs/06-DiceAnalyzerScene/04-InputChange2.gif)
+
+# 07. Disable the Roll Button
+
+When the user enters a valid `DiceGroup` value, the `Roll Button` should be
+clickable. This means, that before that happens, it should be disabled. This can
+be done in the `Inspector`.
+
+1. Click the `Roll Button` in the `Hierarchy`
+2. In the `Inspector` find the `Button` **component**
+3. Uncheck the `Interactable` flag
+
+![Disable Roll Button](../imgs/06-DiceAnalyzerScene/05-InteractableButton.png)
+
+The button in the `Scene` should appear greyed out. Attempting to click on it
+will not fire the `OnClick` event.
+{: .note }
+
+# Challenge: Connect Roll Button to OnDiceGroupInitialized
+
+Can you connect the `Roll Button` to the `DiceGroupController`'s `On Dice Group
+Initialized` **event**? 
+
+To test that it is properly connected, update the `InitializeDiceGroup` method to **invoke**
+the `OnDiceGroupInitialized` event:
+
+```csharp
+public void InitializeDiceGroup(string diceNotation)
+{
+    OnError.Invoke($"The user entered: '{diceNotation}'");
+    OnDiceGroupInitialized.Invoke();
+}
+```
+
+If everything is working, your scene should act similarly to the one below:
+
+![Roll Enabled](../imgs/06-DiceAnalyzerScene/07-RollEnabled.gif)
+
+# Challenge: Connect DiceGroupController to the Roll Button
+
+Clicking the `Roll Button` should **invoke** in the `DiceGroupController`'s
+`Roll()` method. Can you add the `DiceGroupController` to the `Roll Button`?
+
+To test that it is properly connected, update the `Roll()` method to display
+a message to the console.
+
+```csharp
+public void Roll()
+{
+    Debug.Log("Roll clicked!");
+}            
+```
+If everything is working, you should see a message in your console when you click the
+roll button.
+
+# Challenge: Connect DiceInfo to the OnRoll event
+
+When the `DiceGroup` is rolled, the results should be displayed to the user. Can
+you connect the `Dice Info` component to the `DiceGroupController`'s `OnRoll`
+method?
+
+To test that it is properly connected, update the `Roll()` method to **invoke8*
+the `OnRoll` **event**.
+
+```csharp
+public void Roll()
+{
+    OnRoll.Invoke("Dice rolled! Result was 42!");
+}
+```
+
+If all went well, you should see the message displayed on the screen when the
+roll button is clicked.
+
+# 08. DiceGroup.IsParseable
+
+Before implementing the `InitializeDiceGroup(string diceNotation)` **method**,
+it would be convenient to add two **static methods** to the `DiceGroup`
+**class** to help with parsing the users input into a `DiceGroup`.
+
+* Add the following **static method** to your `DiceGroup` **class**:
+
+<details markdown="block">
+<summary>
+<h3 style="display:inline">DiceGroup.IsParseable (Click to Expand)</h3>
+</summary>
+
+```csharp
+/// <summary>
+/// Checks if the specified <paramref name="diceNotation"/> string is in
+/// a <see cref="DiceGroup"/> format. If it can be parsed, returns true
+/// and false otherwise.
+/// </summary>
+public static bool IsParseable(string diceNotation)
+{
+    if (diceNotation == null) { return false; }
+    string trimmed = diceNotation.Trim();
+    string[] tokens = trimmed.Split("d");
+    if (tokens.Length != 2) { return false; }
+    if (!int.TryParse(tokens[0], out int amount)) { return false; }
+    if (amount < 1) { return false; }
+    if (!int.TryParse(tokens[1], out int sides)) { return false; }
+    if (sides < 2) { return false; }
+    return true;
+}
+```
+
+Let's break it down:
+
+1. A `null` string cannot be parsed
+2. `string trimmed = diceNotation.Trim();`
+   * This line of code removes any white space at the end of the incoming string
+     and stores the result in `trimmed`. For example: `"  2d6   "` would become
+     `"2d6"`. This helps reduce any user typos involving white space.
+3.  `string[] tokens = trimmed.Split("d");`
+    * This line of code finds each instance of the `d` character and "splits"
+      the string into sub-strings. For example, `"3d6"` becomes `{"3", "6"}` and
+      `"11d22d33d44"` becomes `{"11", "22", "33", "44}`. This allows us to easily examine
+      the `amount` and `sides` part of the incoming string
+4. `if (tokens.Length != 2) { return false; }`
+   * This line of code checks that the `tokens` array contains exactly 2 values
+     (amount and sides). If this is not true, the string is not in the correct
+     format and we return false. 
+5. `if (!int.TryParse(tokens[0], out int amount)) { return false; }`
+   * Extracts the `amount` part from `tokens`. If `tokens[0]` is not an integer, returns false
+6. `if (amount < 1) { return false; }`
+   * Checks if the `amount` is at least 1. If it is not, we return false. 
+5. `if (!int.TryParse(tokens[1], out int sides)) { return false; }`
+   * Extracts the `sides` part from `tokens[1]`. If `tokens[1]` is not an integer, returns false
+6. `if (sides < 2) { return false; }`
+   * Checks if the `sides` is at least 2. If it is not, we return false. 
+8. At this point, we know the `diceNotation` string is in the correct format
+</details>
+
+# Challenge: Implement DiceGroup.Parse
+
+Next, you must implement the `DiceGroup.Parse` **method**:
+
+1. Validate that the incoming string is in the correct format. If it is not, throw a `System.FormatExcpetion`
+2. Split the string into tokens (use `diceNotation`'s `Split` **method**)
+3. Parse the tokens into `amount` and `sides` (use `int.Parse`)
+4. construct and return a `new DiceGroup(amount, sides)`
+
+<details markdown="block">
+<summary>
+<h3 style="display:inline">DiceGroup.Parse declaration (Click to Expand)</h3>
+</summary>
+
+```csharp
+/// <summary>
+/// Given a <paramref name="diceNotation"/> string, parses it and returns a new <see cref="DiceGroup"/>.
+/// </summary>
+/// <exception cref="System.FormatException">If <paramref name="diceNotation"/> is not a DiceGroup notation.</exception>
+public static DiceGroup Parse(string diceNotation)
+{
+    int amount = int.Parse("1");
+    int sides = int.Parse("2");
+    return new DiceGroup(amount, sides);
+}
+```
+
+This **method** throws a `System.FormatException`. This exception is typically
+thrown when strings cannot be parsed properly. For example `int.Parse("banana")`
+would throw this exception.
+{: .note }
+</details>
+
+
+<details markdown="block">
+<summary>
+<h3 style="display:inline">Additional DiceGroupTest Tests (Click to Expand)</h3>
+</summary>
+
+Add the following tests to your `DiceGroupTest` **class** to give yourself
+confidence that your solution is correct.
+
+```csharp
+[Test, Timeout(5000), Description("Tests the Parse method against 3d6 and 1d20")]
+public void TestParse()
+{
+    DiceGroup group3d6 = DiceGroup.Parse("3d6");
+    Assert.AreEqual(3, group3d6.Amount);
+    Assert.AreEqual(6, group3d6.Sides);
+    Assert.AreEqual(3, group3d6.Min);
+    Assert.AreEqual(18, group3d6.Max);
+
+    DiceGroup group1d20 = DiceGroup.Parse("1d20");
+    Assert.AreEqual(1, group1d20.Amount);
+    Assert.AreEqual(20, group1d20.Sides);
+    Assert.AreEqual(1, group1d20.Min);
+    Assert.AreEqual(20, group1d20.Max);
+}
+
+[Test, Timeout(5000), Description("Tests the Parse method throws a format exception on invalid input")]
+public void TestParseFormatException()
+{
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("d4"));
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("d6"));
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("d8"));
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("1d-6"));
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("0d1"));
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("-1d5"));
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("banana"));
+    Assert.Throws<System.FormatException>(() => DiceGroup.Parse("d5"));
+}
+
+[Test, Timeout(5000), Description("Tests the IsParseable method")]
+public void TestIsParseable()
+{
+    Assert.True(DiceGroup.IsParseable("1d4"));
+    Assert.True(DiceGroup.IsParseable("3d6"));
+    Assert.True(DiceGroup.IsParseable("20d8"));
+    Assert.True(DiceGroup.IsParseable("2d12"));
+    Assert.True(DiceGroup.IsParseable("7d20"));
+    Assert.True(DiceGroup.IsParseable("1d17"));
+
+    Assert.False(DiceGroup.IsParseable("d4"));
+    Assert.False(DiceGroup.IsParseable("d6"));
+    Assert.False(DiceGroup.IsParseable("d8"));
+
+    Assert.False(DiceGroup.IsParseable("1d-6"));
+    Assert.False(DiceGroup.IsParseable("0d1"));
+    Assert.False(DiceGroup.IsParseable("-1d5"));
+    Assert.False(DiceGroup.IsParseable("banana"));
+    Assert.False(DiceGroup.IsParseable("d5"));
+}
+```
+</details>
+
+# Challenge: Implement DiceGroupController.InitializeDiceGroup
+
+With these two **methods** in place, try to implementing the `InitializeDiceGroup` method.
+
+1. Check if `diceNotation` can be parsed using the `DiceGroup.IsParseable` **method**
+    * If it cannot be parsed, **invoke** `OnError`
+2. If it can be parsed: 
+   * use `DiceGroup.Parse(diceNotation)` to parse a `DiceGroup` and set `_diceGroup`
+   * **Invoke** `OnDiceGroupInitialized`
+
+You can test that your method works be entering an invalid input. This should
+display an error message and the roll button will remain disabled.
+
+Entering a valid input should enable the button.
+
+<details markdown="block">
+<summary>
+<h3 style="display:inline">Preview of Expected Results (Click to Expand)</h3>
+</summary>
+
+![Expected Results](../imgs/06-DiceAnalyzerScene/08-InitializeDicEGroupWorking.gif)
+
+</details>
+
+<details markdown="block">
+<summary>
+<h3 style="display:inline">Solution (Click to Expand)</h3>
+</summary>
+
+```csharp
+public void InitializeDiceGroup(string diceNotation)
+{
+    if (!DiceGroup.IsParseable(diceNotation))
+    {
+        OnError.Invoke($"Error: \"{diceNotation}\" is not a valid dice group. Expected {{amount}}d{{sides}}.");
+        return;
+    }
+    _diceGroup = DiceGroup.Parse(diceNotation);
+    OnDiceGroupInitialized.Invoke();
+}
+```
+</details>
+
+# Challenge: Implement DiceGroupController.Roll
+
+Finally, can you implement the `Roll()` **method**? Clicking `Roll` should roll
+the `_diceGroup` and **invoke** the `OnRoll` method reporting the results.
+
+When you're finished, your `Scene` should act similar to the one below:
+
+![Final Challenge Result](../imgs/06-DiceAnalyzerScene/09-FinalChallenge.gif)
+
+# Good Time to Commit
+
+If you have not already done so, now would be a good time to make a commit and
+merge. You just finished a feature. More specifically, you implemented a basic
+`Dice Analyzer`.
+
+{% include GitHub/CreateCommit.md %}
+{% include GitHub/Merge.md %}
+
+# What's Next?
+
+Congratulations on completing your second `Scene`! 
+
+In many adventure games, the game starts with the player having the option to
+create a character with randomly generated abilities. In [Part 3: Character
+Creator], you will implement an `AbilityScore` class which represents
+a player's ability within one of several attributes (strength, dexterity, intelligence, etc...)
+
+Utilizing the `DiceGroup` **class**, you will create a `Character Creator Scene`
+that allows the player to select a name, portrait, and roll for their ability
+scores.
+
+
+---
+[Chapter 5]: {% link pages/02-DiceAnalyzer/05-DiceGroup.md %}
+[Dice Notation]: https://en.wikipedia.org/wiki/Dice_notation
+[Chapter 2.01: Create a Scene]: ../01-CreatingADieRoller/02-CreatingADieRollerScene.html#01-create-a-scene
+[Part 3: Character Creator]: {% link pages/03-CharacterCreator/00-Part3-CharacterCreator.md %}
