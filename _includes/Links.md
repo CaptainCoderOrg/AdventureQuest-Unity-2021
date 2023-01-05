@@ -14,8 +14,8 @@
 [Part 2]: {% link pages/02-DiceAnalyzer/00-Part2-DiceAnalyzer.md %}
 [Chapter 5]: {% link pages/02-DiceAnalyzer/05-DiceGroup.md %}
 [Chapter 5: Dice Group]: {% link pages/02-DiceAnalyzer/05-DiceGroup.md %}
-[Chapter 6]: {% link pages/02-DiceAnalyzer/06-DiceAnalyzerScene.md %}
-[Chapter 6: Dice Group Roller]: {% link pages/02-DiceAnalyzer/06-DiceAnalyzerScene.md %}
+[Chapter 6]: {% link pages/02-DiceAnalyzer/06-DiceGroupRoller.md %}
+[Chapter 6: Dice Group Roller]: {% link pages/02-DiceAnalyzer/06-DiceGroupRoller.md %}
 
 [Dice Notation]: https://en.wikipedia.org/wiki/Dice_notation
 [Expression body definition]: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#expression-body-definitions

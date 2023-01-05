@@ -380,6 +380,7 @@ construct the die what the variable `sides` contains.
 
 ## Testing for Exceptions
 {: .no_toc }
+
 Using exceptions is so useful that the test framework provides tools for testing that
 exceptions are thrown in specific situations! Let's add in an exception test to give
 ourselves confidence that our program will throw an exception when sides is less than 2.

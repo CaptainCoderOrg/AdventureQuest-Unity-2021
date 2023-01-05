@@ -95,6 +95,7 @@ love to hear about it (you can leave a comment at the bottom of this chapter).
 Convince me why I should change them. Maybe I'll update the project! 
 
 ## Properties of a DiceGroup
+{: .no_toc }
 
 Below are the **properties** of the `DiceGroup` **class** that I feel should be **exposed** publicly:
 
@@ -141,11 +142,17 @@ to track the internal state of the `DiceGroup`.
 
 # 03. Derived Properties
 
-Something you may have noticed is that the **properties** of a `DiceGroup` are 
-related. For example, `Amount` and `Min` will return the same value. In many
-ways, it is simply a convenience to have a **property** labeled `Min`. In `C#`
-we can write a `get`ter as a derived value using the `=>` operator. For example,
-you can replace:
+Something you may have noticed is that the **properties** of a `DiceGroup` are
+related. For example, `Amount` and `Min` should actually be the same value. Why?
+Consider what happens when you roll the `DiceGroup` and all of the dice land on
+a 1? This is the minimum possible value that can be rolled. It also just so
+happens to be the amount of dice that are in the group. It could be argued that
+it doesn't make sense to have both of these as **properties** since they are
+always guaranteed to have the same value.
+
+However, for ease of reasoning, it can be convenient to have a **property**
+named `Min`. In `C#` we can write a `get`ter as a derived value using the `=>`
+operator. For example, you can replace:
 
 ```csharp
 public int Min { get; }
@@ -219,11 +226,18 @@ public int Max => Amount * Sides;
 
 Next, define a constructor for `DiceGroup`.
 
-* What information is needed to construct a `DiceGroup`?
+* What information is needed to construct a `DiceGroup`? (What parameters will it accept?)
+* How will you validate the parameters?
 
 <details markdown="block">
-  <summary>Hint 1: Parameters</summary>
+  <summary>Hint 1: Parameters (Click to Expand)</summary>
   You can define a `DiceGroup` with two integers: `{amount}d{sides}`
+</details>
+
+<details markdown="block">
+  <summary>Hint 2: Validation (Click to Expand)</summary>
+  * A `DiceGroup` must have at least 1 die
+  * A `Die` must have at least 2 sides
 </details>
 
 
@@ -248,6 +262,7 @@ public DiceGroup(int amount, int sides)
 </details>
 
 ## DiceGroupTest
+{: .no_toc }
 
 With a constructor defined, now would be a good time to add a `DiceGroupTest` to
 your `Tests/Model` folder. Below are 2 tests that will help validate your solution
@@ -264,7 +279,7 @@ namespace AdventureQuest.Dice
     public class DiceGroupTest
     {
 
-        [Test, Timeout(5000), Description("Tests the DiceGroup(amoutn, sides) Constructor")]
+        [Test, Timeout(5000), Description("Tests the DiceGroup(amount, sides) Constructor")]
         public void TestConstructor()
         {
             DiceGroup group3d6 = new(3, 6);
@@ -295,34 +310,60 @@ namespace AdventureQuest.Dice
 ```
 </details>
 
-## Challenge: Implement the DiceGroup Constructor
+# Challenge: Fix the DiceGroup Constructor
 
-* How will you validate the arguments passed to the constructor? Which exceptions should be thrown?
-* How will you use that information to initialize the `_dice` field?
-* How will you use that to populate the `_dice` **field**?
+Below is an implementation of the `DiceGroup` Constructor that initializes the
+`_dice` array to have 3 dice and initializes each of the dice to have 6 sides.
+Unfortunately, this will not pass the provided unit tests. Can you fix the
+constructor?
 
+<details markdown="block">
+  <summary>Incomplete Constructor (Click to Expand)</summary>
+
+```csharp
+public DiceGroup(int amount, int sides)
+{
+    if (amount < 1) throw new System.ArgumentException($"DiceGroup must contain at least 1 die but was {amount}.");
+    if (sides < 2) throw new System.ArgumentException($"DiceGroup must have at least 2 sides but was {sides}.");
+    _dice = new Die[3];
+    for (int i = 0; i < _dice.Length; i++)
+    {
+      _dice[i] = new Die(6);
+    }
+}
+```
+</details>
+
+{: .note }
 Because all of the **properties** are derived using the `_dice` **field**
 there is no need to initialize them in the constructor.
-{: .note }
-
 
 <details markdown="block">
-  <summary>Hint 1: Validation</summary>
-  A `DiceGroup` should have at least 1 `Die` and a `Die` must have at least 2 sides.
-</details>
+  <summary>Hint 1: Initializing _dice (Click to Expand)</summary>
 
+The code above below initializes the `_dice` array to have space for 3 `Die`
+**objects**. How many die objects will you need to store?
 
-<details markdown="block">
-  <summary>Hint 2: Initializing _dice</summary>
-You should initialize the `_dice` **field** to be an array with enough space for
-each `Die`.
+```csharp
+_dice = new Die[3];
+```
 </details>
 
 <details markdown="block">
-  <summary>Hint 3: Populating _dice</summary>
-You must iterate `amount` times to populate the `_dice` array. Each time,
-you will need to construct a `new Die(sides)` with the specified number of
-sides.
+  <summary>Hint 2: Populating _dice (Click to Expand)</summary>
+
+The code uses `for` loop to iterate over the length of the `_dice` array 
+(`i < _dice.Length`). Each iteration, one of the spaces in the `_dice` array is
+assigned a new 6-sided die (`new Die(6)`).
+
+* How many sides **should** each `Die` have?
+
+```csharp
+for (int i = 0; i < _dice.Length; i++)
+{
+  _dice[i] = new Die(6);
+}
+```
 </details>
 
 <details markdown="block">
@@ -334,7 +375,7 @@ public DiceGroup(int amount, int sides)
     if (amount < 1) throw new System.ArgumentException($"DiceSet must contain at least 1 die but was {amount}.");
     if (sides < 2) throw new System.ArgumentException($"DiceSet must have at least 2 sides but was {sides}.");
     _dice = new Die[amount];
-    for (int i = 0; i < amount; i++)
+    for (int i = 0; i < _dice.Length; i++)
     {
         _dice[i] = new Die(sides);
     }
