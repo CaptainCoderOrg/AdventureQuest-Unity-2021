@@ -9,14 +9,14 @@ parent: "Part 2: Dice Notation"
 # Chapter 6: Dice Group Roller
 {: .no_toc }
 
-In [Chapter 5], you created a `DiceGroup` which simulates rolling groups of like
+In [Chapter 5: Dice Group], you created a `DiceGroup` which simulates rolling groups of like
 sided dice (e.g. `3d6` or `2d4` or `1d20`). In this chapter, you will create a
 simple scene that allows the player to specify a `DiceGroup` using [Dice
 Notation] and roll that `DiceGroup`. This is the first step in creating a `Dice Analyzer`.
 
 When you have completed this chapter, you will have a scene that is similar to the one below.
 
-{% include demo.html path="/demos/part2/index.html" %}
+{% include demo.html path="/demos/chapter6/index.html" %}
 
 
 <details open markdown="block">
@@ -551,19 +551,20 @@ When you're finished, your `Scene` should act similar to the one below:
 
 # Good Time to Commit
 
-If you have not already done so, now would be a good time to make a commit. You just finished a work in progress. More specifically, you implemented a basic `Dice Analyzer Scene`.
+If you have not already done so, now would be a good time to make a commit. You
+just finished a work in progress. More specifically, you implemented a basic
+`Dice Analyzer Scene`.
 
 {% include GitHub/CreateCommit.md %}
 
 # What's Next?
 
-Congratulations on completing your second `Scene`! Hopefully, adding UI elements
-and connecting them together using `UnityEvent`s is beginning to feel easier.
+Hopefully, you are becoming more comfortable with Unity's UI elements and
+connecting them with `UnityEvent`s is beginning to feel easier.
 
-That said, the `Dice Analyzer Scene` is not doing much "analyzing". In [Chapter
-7: Histogram], you will create a `Histogram` **class** that will help you analyze
-the probability of different outcomes when rolling a `DiceGroup`.
-
+That said, this "Dice Analyzer" is not doing much "analysis". In [Chapter 7:
+Histogram], you will create a `Histogram` **class** that will be able to track
+the number of times each different outcome occurs while rolling a `DiceGroup`.
 
 ---
 {% include Links.md %}
