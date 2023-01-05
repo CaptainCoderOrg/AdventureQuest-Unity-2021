@@ -2,7 +2,7 @@
 layout: page
 title: "Ch 5: Dice Group"
 nav_order: 5
-parent: "Part 2: Dice Analyzer"
+parent: "Part 2: Dice Notation"
 ---
 
 # Chapter 5: Dice Group
@@ -436,6 +436,5 @@ player to provide a dice group formula in Dice Notation (`3d6` or `2d4`) and
 roll the `DiceGroup` while reporting information about the rolls.
 
 ---
-[Expression body definition]: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#expression-body-definitions
 
-[Chapter 6: Dice Analyzer Scene]: {% link pages/02-DiceAnalyzer/06-DiceAnalyzerScene.md %}
+{% include Links.md %}

@@ -370,6 +370,4 @@ is 24 (2*6 + 3*4) but what are the odds of rolling a `12`?
 When you're ready, continue to [Part 5: Modeling a Dice Group](../05-DiceGroup/README.md)
 
 ---
-[Chapter 3]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}
-
-[Chapter 3: Adding an OnRoll Event]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}
+{% include Links.md %}

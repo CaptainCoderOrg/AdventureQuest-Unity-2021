@@ -460,8 +460,4 @@ displaying on the screen. To do this, we will learn how to create our own
 `UnityEvent`s. When you're ready, proceed to [Chapter 3: Adding an OnRoll Event].
 
 ---
-
-[Horizontal Layout Group]: https://docs.unity.cn/2021.3/Documentation/Manual/script-HorizontalLayoutGroup.html
-
-[Chapter 1: Modeling a Die]: {% link pages/01-CreatingADieRoller/01-ModelingADie.md %}
-[Chapter 3: Adding an OnRoll Event]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}
+{% include Links.md %}

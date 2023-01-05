@@ -15,7 +15,7 @@ Adventure Quest will model its randomness in the same way!
 That said, we're not talking about traditional 6 sided die. No, no, no! These
 games bring out giant sacks of dice with varying sizes and combinations.
 
-![Dice Goblin](../imgs/DiceGoblin.png)
+![Dice Goblin]
 
 In this part, you will create a Die Roller Scene in Unity that allows the user
 to simulate rolling multi-sided dice.
@@ -50,11 +50,6 @@ the complexity of adding new buttons and updating existing buttons throughout
 your project.
 
 ---
+{% include Links.md %}
 
-[Chapter 1: Modeling a Die]: {% link pages/01-CreatingADieRoller/01-ModelingADie.md %}
-
-[Chapter 2: Creating a Die Roller Scene]: {% link pages/01-CreatingADieRoller/02-CreatingADieRollerScene.md %}
-
-[Chapter 3: Adding an OnRoll Event]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}
-
-[Chapter 4: Creating a Die Button Prefab]: {% link pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.md %}
+[Dice Goblin]: ../imgs/DiceGoblin.png

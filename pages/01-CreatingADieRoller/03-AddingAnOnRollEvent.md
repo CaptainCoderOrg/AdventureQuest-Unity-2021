@@ -272,6 +272,4 @@ After you have completed the challenge, you should proceed to [Chapter 4:
 Creating a Die Button Prefab]
 
 ---
-[Chapter 2: Creating a Die Roller Scene]: {% link pages/01-CreatingADieRoller/02-CreatingADieRollerScene.md %}
-
-[Chapter 4: Creating a Die Button Prefab]: {% link pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.md %}
+{% include Links.md %}

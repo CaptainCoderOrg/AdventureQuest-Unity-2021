@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Part 2: Dice Analyzer"
+title: "Part 2: Dice Notation"
 nav_order: 2
 has_children: true
 ---
 
-# Part 2: Dice Group Analyzer
+# Part 2: Dice Notation
 
 In this part of the project you will implement a `DiceGroup` class that allows you to specify groups of like-sided dice to be rolled together. For example, in Dungeon and Dragons, a character's ability scores are generated using 3 six-sided dice (`3d6`).
 
@@ -24,3 +24,6 @@ like sided dice that can be rolled together.
 In this chapter, you will use everything you've learned thus far (and more) to
 implement a `Dice Group Roller` that allows the user to specify a `DiceGroup`
 and roll it.
+
+---
+{% include Links.md %}

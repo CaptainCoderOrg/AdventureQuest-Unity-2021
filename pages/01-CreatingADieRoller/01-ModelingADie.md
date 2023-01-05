@@ -571,5 +571,5 @@ Once you have passed all of the tests, you should proceed to [Chapter 2: Creatin
 Die Roller Scene]
 
 ---
-[Principle of least privilege]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
-[Chapter 2: Creating a Die Roller Scene]: {% link pages/01-CreatingADieRoller/02-CreatingADieRollerScene.md %}
+
+{% include Links.md %}

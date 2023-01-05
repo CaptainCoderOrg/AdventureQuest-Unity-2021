@@ -1,21 +1,23 @@
 ---
 layout: page
-title: "Ch 6: Dice Analyzer Scene"
+title: "Ch 6: Dice Group Roller"
 nav_order: 6
-parent: "Part 2: Dice Analyzer"
+parent: "Part 2: Dice Notation"
 ---
 
 
-# Chapter 6: Dice Analyzer Scene
+# Chapter 6: Dice Group Roller
 {: .no_toc }
 
 In [Chapter 5], you created a `DiceGroup` which simulates rolling groups of like
 sided dice (e.g. `3d6` or `2d4` or `1d20`). In this chapter, you will create a
 simple scene that allows the player to specify a `DiceGroup` using [Dice
-Notation] and roll that `DiceGroup` while collecting and reporting statistics
-about the roll to the screen.
+Notation] and roll that `DiceGroup`. This is the first step in creating a `Dice Analyzer`.
 
-TODO: Add demo scene here
+When you have completed this chapter, you will have a scene that is similar to the one below.
+
+{% include demo.html path="/demos/part2/index.html" %}
+
 
 <details open markdown="block">
   <summary>
@@ -549,29 +551,19 @@ When you're finished, your `Scene` should act similar to the one below:
 
 # Good Time to Commit
 
-If you have not already done so, now would be a good time to make a commit and
-merge. You just finished a feature. More specifically, you implemented a basic
-`Dice Analyzer`.
+If you have not already done so, now would be a good time to make a commit. You just finished a work in progress. More specifically, you implemented a basic `Dice Analyzer Scene`.
 
 {% include GitHub/CreateCommit.md %}
-{% include GitHub/Merge.md %}
 
 # What's Next?
 
-Congratulations on completing your second `Scene`! 
+Congratulations on completing your second `Scene`! Hopefully, adding UI elements
+and connecting them together using `UnityEvent`s is beginning to feel easier.
 
-In many adventure games, the game starts with the player having the option to
-create a character with randomly generated abilities. In [Part 3: Character
-Creator], you will implement an `AbilityScore` class which represents
-a player's ability within one of several attributes (strength, dexterity, intelligence, etc...)
-
-Utilizing the `DiceGroup` **class**, you will create a `Character Creator Scene`
-that allows the player to select a name, portrait, and roll for their ability
-scores.
+That said, the `Dice Analyzer Scene` is not doing much "analyzing". In [Chapter
+7: Histogram], you will create a `Histogram` **class** that will help you analyze
+the probability of different outcomes when rolling a `DiceGroup`.
 
 
 ---
-[Chapter 5]: {% link pages/02-DiceAnalyzer/05-DiceGroup.md %}
-[Dice Notation]: https://en.wikipedia.org/wiki/Dice_notation
-[Chapter 2.01: Create a Scene]: ../01-CreatingADieRoller/02-CreatingADieRollerScene.html#01-create-a-scene
-[Part 3: Character Creator]: {% link pages/03-CharacterCreator/00-Part3-CharacterCreator.md %}
+{% include Links.md %}
