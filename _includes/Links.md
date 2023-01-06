@@ -9,12 +9,12 @@
 [2: Dice Notation]: {% link pages/02-DiceNotation/2.0-DiceNotation.md %}
 [2.1: Dice Group]: {% link pages/02-DiceNotation/2.1-DiceGroup.md %}
 [2.2: Dice Group Roller]: {% link pages/02-DiceNotation/2.2-DiceGroupRoller.md %}
-[2.3 Dice Pool]: {% link pages/02-DiceNotation/2.3-DicePool.md %}
+[2.3: Dice Pool]: {% link pages/02-DiceNotation/2.3-DicePool.md %}
 
-[3.0 Character Creator]: {% link pages/03-CharacterCreator/3.0-CharacterCreator.md %}
-[3.1 Ability Score]: {% link pages/03-CharacterCreator/3.1-AbilityScore.md %}
-[3.2 Ability Score Label]: {% link pages/03-CharacterCreator/3.2-AbilityScoreLabel.md %}
-[3.4 Abilities Manifest Prefab]: TODO
+[3.0: Character Creator]: {% link pages/03-CharacterCreator/3.0-CharacterCreator.md %}
+[3.1: Ability Score]: {% link pages/03-CharacterCreator/3.1-AbilityScore.md %}
+[3.2: Ability Score Prefab]: {% link pages/03-CharacterCreator/3.2-AbilityScorePrefab.md %}
+[3.4: Abilities Manifest Prefab]: TODO
 
 [Dice Notation]: https://en.wikipedia.org/wiki/Dice_notation
 [Expression body definition]: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#expression-body-definitions
