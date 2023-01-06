@@ -11,16 +11,22 @@
 [Chapter 4]: {% link pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.md %}
 [Chapter 4: Creating a Die Button Prefab]: {% link pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.md %}
 
-[Part 2]: {% link pages/02-DiceAnalyzer/00-Part2-DiceAnalyzer.md %}
-[Chapter 5]: {% link pages/02-DiceAnalyzer/05-DiceGroup.md %}
-[Chapter 5: Dice Group]: {% link pages/02-DiceAnalyzer/05-DiceGroup.md %}
-[Chapter 6]: {% link pages/02-DiceAnalyzer/06-DiceGroupRoller.md %}
-[Chapter 6: Dice Group Roller]: {% link pages/02-DiceAnalyzer/06-DiceGroupRoller.md %}
-[Chapter 7]: {% link pages/02-DiceAnalyzer/07-Histogram.md %}
-[Chapter 7: Histogram]: {% link pages/02-DiceAnalyzer/07-Histogram.md %}
+[2: Dice Notation]: {% link pages/02-DiceNotation/2.0-DiceNotation.md %}
+[2.1: Dice Group]: {% link pages/02-DiceNotation/2.1-DiceGroup.md %}
+[2.2: Dice Group Roller]: {% link pages/02-DiceNotation/2.2-DiceGroupRoller.md %}
+[2.3 Dice Pool]: {% link pages/02-DiceNotation/2.3-DicePool.md %}
+
+[3.0 Character Creator]: {% link pages/03-CharacterCreator/3.0-CharacterCreator.md %}
+[3.1 Ability Score]: {% link pages/03-CharacterCreator/3.1-AbilityScore.md %}
+[3.2 Ability Score Label]: {% link pages/03-CharacterCreator/3.2-AbilityScoreLabel.md %}
+[3.4 Abilities Manifest Prefab]: TODO
 
 [Dice Notation]: https://en.wikipedia.org/wiki/Dice_notation
 [Expression body definition]: https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/properties#expression-body-definitions
+[Fail Fast]: https://en.wikipedia.org/wiki/Fail-fast
 [Histogram]: https://en.wikipedia.org/wiki/Histogram
 [Horizontal Layout Group]: https://docs.unity.cn/2021.3/Documentation/Manual/script-HorizontalLayoutGroup.html
 [Principle of least privilege]: https://en.wikipedia.org/wiki/Principle_of_least_privilege
+
+
+[string.Join]: https://learn.microsoft.com/en-us/dotnet/api/system.string.join?view=net-7.0#system-string-join(system-string-system-string())
