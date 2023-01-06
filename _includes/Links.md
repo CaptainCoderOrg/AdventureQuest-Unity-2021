@@ -1,15 +1,10 @@
-[Part 1]: {% link pages/01-CreatingADieRoller/00-Part1-ModelingADie.md %}
-[Chapter 1]: {% link pages/01-CreatingADieRoller/01-ModelingADie.md %}
-[Chapter 1: Modeling a Die]: {% link pages/01-CreatingADieRoller/01-ModelingADie.md %}
-
-[Chapter 2]: {% link pages/01-CreatingADieRoller/02-CreatingADieRollerScene.md %}
-[Chapter 2: Creating a Die Roller Scene]: {% link pages/01-CreatingADieRoller/02-CreatingADieRollerScene.md %}
-[Chapter 2.01: Create a Scene]: /pages/01-CreatingADieRoller/02-CreatingADieRollerScene.html#01-create-a-scene
-
-[Chapter 3]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}
-[Chapter 3: Adding an OnRoll Event]: {% link pages/01-CreatingADieRoller/03-AddingAnOnRollEvent.md %}
-[Chapter 4]: {% link pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.md %}
-[Chapter 4: Creating a Die Button Prefab]: {% link pages/01-CreatingADieRoller/04-CreatingADieButtonPrefab.md %}
+[0: Setup]: {% link pages/00-Setup.md %}
+[1: Creating A Die Roller]: {% link pages/01-CreatingADieRoller/1.0-CreatingADieRoller.md %}
+[1.1: Modeling a Die]: {% link pages/01-CreatingADieRoller/1.1-ModelingADie.md %}
+[1.2: Creating a Die Roller Scene]: {% link pages/01-CreatingADieRoller/1.2-CreatingADieRollerScene.md %}
+[1.2.01: Create a Scene]: /pages/01-CreatingADieRoller/1.2-CreatingADieRollerScene.html#01-create-a-scene
+[1.3: Adding an OnRoll Event]: {% link pages/01-CreatingADieRoller/1.3-AddingAnOnRollEvent.md %}
+[1.4: Die Button Prefab]: {% link pages/01-CreatingADieRoller/1.4-DieButtonPrefab.md %}
 
 [2: Dice Notation]: {% link pages/02-DiceNotation/2.0-DiceNotation.md %}
 [2.1: Dice Group]: {% link pages/02-DiceNotation/2.1-DiceGroup.md %}

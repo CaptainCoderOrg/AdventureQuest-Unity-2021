@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Chapter 0: Setup"
+title: "0: Setup"
 nav_order: 0
 ---
 # Chapter 0: Setup
@@ -116,8 +116,7 @@ More specifically, you just initialized the Adventure Quest Unity project.
 
 # What's next?
 
-With the project setup and ready to go, you can proceed to [Part 1: Modeling a Die].
+With the project setup and ready to go, you can proceed to [1: Creating A Die Roller].
 
 ---
-
-[Part 1: Modeling a Die]: {% link pages/01-CreatingADieRoller/00-Part1-ModelingADie.md %}
+{% include Links.md %}
